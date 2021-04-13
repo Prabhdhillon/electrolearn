@@ -10,21 +10,18 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700;900&display=swap" rel="stylesheet">
-    <title>Register</title>
+    <title>Login</title>
 </head>
 
 <body>
     <div class="auth">
 
+
         <div class="container">
-            <h2 class="title " style="text-align:center;">Get Started for FREE!</h2>
+            <h2 class="title " style="text-align:center;">Continue your Journey!</h2>
         </div>
         <div class="container mt-5">
             <form class="form">
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" class="form-control" id="name">
-                </div>
                 <div class="form-group">
                     <label for="email">Email address</label>
                     <input type="email" class="form-control" id="email">
@@ -33,17 +30,10 @@
                     <label for="password">Password</label>
                     <input type="password" class="form-control" id="password">
                 </div>
-                <div class="form-group">
-                    <label for="confirm-password">Confirm Password</label>
-                    <input type="password" class="form-control" id="password">
-                </div>
-                <div class="form-group">
-                    <label for="profession">I work as a </label>
-                    <input type="text" class="form-control" id="profession" placeholder="Freelancer / Student / Designer / Developer">
-                </div>
+
                 <div class="form-group-button">
-                    <button type="submit" class="btn btn-primary">Create account</button>
-                    <a href="" class="btn-link">Already have an account?</a>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <a href="" class="btn-link">Are you new here?</a>
                 </div>
 
             </form>

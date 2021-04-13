@@ -1,4 +1,6 @@
 .auth{
+    
+    
     .title {
         font-weight: 700;
         font-size: 56px;
@@ -35,14 +37,23 @@
         outline: none;
     }
     .btn-link {
+        
         color: #3f4459;
         text-decoration: none;
         font-weight: 700;
     }
+    .btn-link:hover{
+        color:white;
+    }
     .form-group-button {
+        
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-top: 25px;
     }
+    .nopadding{
+        padding:0;
+    }
+    
 }
