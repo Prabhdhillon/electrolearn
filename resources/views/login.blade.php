@@ -15,12 +15,8 @@
 
 <body>
     <div class="auth">
-
-
         <div class="container">
             <h2 class="title " style="text-align:center;">Continue your Journey!</h2>
-        </div>
-        <div class="container mt-5">
             <form class="form">
                 <div class="form-group">
                     <label for="email">Email address</label>
@@ -30,12 +26,10 @@
                     <label for="password">Password</label>
                     <input type="password" class="form-control" id="password">
                 </div>
-
                 <div class="form-group-button">
                     <button type="submit" class="btn btn-primary">Login</button>
                     <a href="" class="btn-link">Are you new here?</a>
                 </div>
-
             </form>
         </div>
     </div>

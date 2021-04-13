@@ -12,6 +12,7 @@
         font-size: 12px;
         width: 25vw;
         margin: 0 auto;
+        margin-top: 30px;
     }
     .form-group{
         margin-top: 25px;
@@ -54,6 +55,13 @@
     }
     .nopadding{
         padding:0;
+    }
+    .image-background{
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        z-index:-1000;
     }
     
 }

@@ -15,11 +15,8 @@
 
 <body>
     <div class="auth">
-
         <div class="container">
             <h2 class="title " style="text-align:center;">Get Started for FREE!</h2>
-        </div>
-        <div class="container mt-5">
             <form class="form">
                 <div class="form-group">
                     <label for="name">Your Name</label>
@@ -45,7 +42,6 @@
                     <button type="submit" class="btn btn-primary">Create account</button>
                     <a href="" class="btn-link">Already have an account?</a>
                 </div>
-
             </form>
         </div>
     </div>

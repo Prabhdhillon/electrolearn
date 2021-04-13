@@ -20,6 +20,7 @@ body {
   font-size: 12px;
   width: 25vw;
   margin: 0 auto;
+  margin-top: 30px;
 }
 .auth .form-group {
   margin-top: 25px;
@@ -58,4 +59,11 @@ body {
 }
 .auth .nopadding {
   padding: 0;
+}
+.auth .image-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1000;
 }
