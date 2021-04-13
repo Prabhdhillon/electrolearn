@@ -1,0 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Poppins";
+    background: #1c1d23;
+    color: white;
+}
+
+@import "auth.scss";
