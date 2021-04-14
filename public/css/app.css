@@ -57,3 +57,8 @@ body {
   align-items: center;
   margin-top: 55px;
 }
+.auth .alert {
+  width: 50vh;
+  font-size: 14px;
+  padding: 7px;
+}

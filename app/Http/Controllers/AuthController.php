@@ -14,4 +14,28 @@ class AuthController extends Controller
     {
         return view("login");
     }
+    public function handleRegister()
+    {
+        // $formdata = request()->except("_token");
+        // dd($formdata);
+        $validaterequest = request()->validate([
+            'name' => 'required|min:3|max:120 ',
+            'email' => 'required',
+            'password' => 'required|min:8',
+            'confirm-password' => 'required',
+            'work' => 'required|alpha',
+        ]);
+        dd($validaterequest);
+    }
+    public function handleLogin()
+    {
+
+        $validaterequest = request()->validate([
+
+            'email' => 'required',
+            'password' => 'required|min:8',
+
+        ]);
+        dd($validaterequest);
+    }
 }
