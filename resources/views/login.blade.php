@@ -14,6 +14,7 @@
 </head>
 
 <body>
+
     <div class="auth">
         <div class="container">
             <h2 class="title " style="text-align:center;">Continue your Journey!</h2>
