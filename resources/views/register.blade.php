@@ -11,7 +11,7 @@
                 <x-auth-field label="Your Name" id="name" type="text" />
                 <x-auth-field label="Email address" id="email" type="email" />
                 <x-auth-field label="Password" id="password" type="password" />
-                <x-auth-field label="Confirm Password" id="confirm-password" type="password" />
+                <x-auth-field label="Confirm Password" id="password_confirmation" type="password" />
                 <x-auth-field label="I work as a " id="work" type="text" placeholder="Developer / Designer / Student" />
 
                 <div class="form-group-button">

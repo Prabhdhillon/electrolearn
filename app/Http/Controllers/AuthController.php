@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
@@ -20,12 +22,15 @@ class AuthController extends Controller
         // dd($formdata);
         $validaterequest = request()->validate([
             'name' => 'required|min:3|max:120 ',
-            'email' => 'required',
-            'password' => 'required|min:8||confirmed',
-            'confirm-password' => 'required|min:8',
+            'email' => 'required|email',
+            'password' => 'required|min:8|confirmed',
+            'password_confirmation' => 'required|min:8',
             'work' => 'required|alpha',
         ]);
-        dd($validaterequest);
+        $user= new User($validaterequest);
+            $user->password=Hash::make($user->password);
+            $user->save();
+            return redirect()->back();
     }
     public function handleLogin()
     {
