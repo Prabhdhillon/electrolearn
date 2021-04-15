@@ -21,8 +21,8 @@ class AuthController extends Controller
         $validaterequest = request()->validate([
             'name' => 'required|min:3|max:120 ',
             'email' => 'required',
-            'password' => 'required|min:8',
-            'confirm-password' => 'required',
+            'password' => 'required|min:8||confirmed',
+            'confirm-password' => 'required|min:8',
             'work' => 'required|alpha',
         ]);
         dd($validaterequest);
