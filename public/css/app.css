@@ -17,9 +17,10 @@ body {
   display: flex;
   flex-direction: column;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 14px;
   width: 25vw;
   margin: 0 auto;
+  margin-top: 30px;
 }
 .auth .form-group {
   margin-top: 25px;
@@ -30,13 +31,13 @@ body {
   background: #242630;
   border: none;
   height: 30px;
-  font-size: 12px;
+  font-size: 14px;
   margin-top: 10px;
   color: white;
 }
 .auth .btn-primary {
   width: 180px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
   border-radius: 100px;
   border: none;
@@ -47,9 +48,17 @@ body {
   text-decoration: none;
   font-weight: 700;
 }
+.auth .btn-link:hover {
+  color: white;
+}
 .auth .form-group-button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 25px;
+  margin-top: 55px;
+}
+.auth .alert {
+  width: 50vh;
+  font-size: 14px;
+  padding: 7px;
 }
