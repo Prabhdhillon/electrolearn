@@ -57,8 +57,40 @@ body {
   align-items: center;
   margin-top: 55px;
 }
-.auth .alert {
-  width: 50vh;
+
+.course-view .main-section {
+  text-align: center;
+  width: 38vw;
+}
+.course-view h1 {
+  font-size: 56px;
+  font-weight: 700;
+}
+.course-view .subtitle-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.course-view .subtitle {
+  font-weight: 700;
   font-size: 14px;
-  padding: 7px;
+}
+.course-view .about {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 25px;
+}
+.course-view .subtitle-tools {
+  font-weight: 700;
+  font-size: 14px;
+  text-align: left;
+  margin-top: 30px;
+}
+.course-view .about-tools {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 5px;
 }

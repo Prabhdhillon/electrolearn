@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CourseViewController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +20,6 @@ Route::get('/login', [AuthController::class, 'login'])->name("login");
 Route::post('/login', [AuthController::class, 'handleLogin']);
 Route::get('/register', [AuthController::class, 'register'])->name("register");
 Route::post('/register', [AuthController::class, 'handleRegister']);
+
+Route::get('/courseview', [CourseViewController::class, 'index'])->name("courseview");
+

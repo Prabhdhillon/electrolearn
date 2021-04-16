@@ -1,0 +1,40 @@
+.course-view{
+    .main-section{
+        text-align:center;
+        width:38vw;
+    }
+    h1{
+        font-size:56px;
+        font-weight:700;
+        
+    }
+    .subtitle-group{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top:20px;
+        
+    }
+    .subtitle{
+        font-weight:700;
+        font-size:14px;
+    }
+    .about{
+        text-align: left;
+        font-size:14px;
+        font-weight:400;
+        margin-top:25px;
+    }
+    .subtitle-tools{
+        font-weight:700;
+        font-size:14px;
+        text-align:left;
+        margin-top:30px;
+    }
+    .about-tools{
+        text-align: left;
+        font-size:14px;
+        font-weight:400;
+        margin-top:5px;
+    }
+}
