@@ -12,8 +12,7 @@
                 <x-auth-field label="Email address" id="email" type="email" />
                 <x-auth-field label="Password" id="password" type="password" />
                 <x-auth-field label="Confirm Password" id="password_confirmation" type="password" />
-                <x-auth-field label="I work as a " id="work" type="text" placeholder="Developer / Designer / Student" />
-
+                <x-auth-field label="I work as a" id="work" type="text" placeholder="Developer / Designer / Student" />
                 <div class="form-group-button">
                     <button type="submit" class="btn btn-primary">Create account</button>
                     <a href="" class="btn-link">Already have an account?</a>

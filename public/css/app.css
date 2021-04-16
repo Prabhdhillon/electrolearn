@@ -58,39 +58,56 @@ body {
   margin-top: 55px;
 }
 
-.course-view .main-section {
-  text-align: center;
-  width: 38vw;
-}
 .course-view h1 {
-  font-size: 56px;
+  font-size: 40px;
   font-weight: 700;
+  width: 100%;
+  margin-top: 30px;
 }
-.course-view .subtitle-group {
+.course-view .course-subtitle {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
-}
-.course-view .subtitle {
   font-weight: 700;
   font-size: 14px;
 }
-.course-view .about {
-  text-align: left;
-  font-size: 14px;
+.course-view .course-info-paragraph {
+  text-align: justify;
+  font-size: 16px;
   font-weight: 400;
-  margin-top: 25px;
+  margin-top: 10px;
+  line-height: 25px;
 }
-.course-view .subtitle-tools {
+.course-view .course-info-heading {
   font-weight: 700;
-  font-size: 14px;
+  font-size: 12px;
   text-align: left;
   margin-top: 30px;
+  text-transform: uppercase;
 }
-.course-view .about-tools {
-  text-align: left;
-  font-size: 14px;
+.course-view .course {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 1198px) {
+  .course {
+    width: 50vw;
+  }
+}
+.lecture {
+  margin-bottom: 50px;
+}
+.lecture .lecture-image {
+  width: 100%;
+}
+.lecture .lecture-info .lecture-title {
+  font-weight: bold;
+  margin-top: 15px;
+}
+.lecture .lecture-info .lecture-meta {
+  float: right;
   font-weight: 400;
-  margin-top: 5px;
 }

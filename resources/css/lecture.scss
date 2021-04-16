@@ -1,0 +1,17 @@
+.lecture{
+    margin-bottom: 50px;
+   .lecture-image{
+        width: 100%;
+    }
+    .lecture-info{
+        .lecture-title{
+            font-weight: bold;
+            margin-top:15px;    
+        }
+        .lecture-meta{
+            float:right;
+            font-weight: 400;
+        }
+        .lecture-description{}
+    }
+}
