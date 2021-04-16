@@ -40,7 +40,13 @@ class AuthController extends Controller
             'email' => 'required',
             'password' => 'required|min:8',
 
+            
         ]);
-        dd($validaterequest);
+        $user=User::where(["email"=>request()->email])->first();
+        if($user==null){
+            return("Email not found");
+        }
+        $user_verified=Hash::check(request()->password,$user->password);
+        
     }
 }
