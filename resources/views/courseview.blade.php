@@ -15,7 +15,7 @@
                 <div class="course-subtitle">
                     <div>by Michael Grzesiek</div>
                     <div>1hr32min</div>
-                </div>s
+                </div>
                 <div class="course-info">
                     <div class="course-info-paragraph">
                         Learn the basics of streaming by the popular twitch streamer Michael Grzesiek, better known as
