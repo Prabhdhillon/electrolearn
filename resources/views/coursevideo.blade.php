@@ -9,8 +9,9 @@
                 <source src="{{ asset('images/video/react-1.mp4') }}" type="video/mp4" />
             </video>
             <div class="course-player-title">1. The Quickest Guide to React Hooks</div>
-            <div class="course-player-paragraph">Get started with React in this crash course. We will be building a task
-                tracker app and look at components, props, state, hooks, working with an API and more.<br><br>
+            <div class="course-player-paragraph">
+                <p>Get started with React in this crash course. We will be building a task
+                    tracker app and look at components, props, state, hooks, working with an API and more.</p>
 
                 <p>Code:https://github.com/bradtraversy/react...​</p>
 

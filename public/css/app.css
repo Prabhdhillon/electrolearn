@@ -125,6 +125,7 @@ body {
 .course-player .course-player-paragraph {
   font-size: 14px;
   font-weight: 400;
+  margin-top: 15px;
 }
 .course-player .btn-primary {
   width: 180px;
