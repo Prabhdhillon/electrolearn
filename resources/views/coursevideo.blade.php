@@ -39,8 +39,8 @@
                 <button type="submit" class="btn btn-primary">Next</button>
             </div>
             <div class="button-group">
-                <div class="course-player-title"><a href="#">0. Introduction</a></div>
-                <div class="course-player-title"><a href="#">1. Styled Components</a></div>
+                <div class="course-player-links"><a href="#">0. Introduction</a></div>
+                <div class="course-player-links"><a href="#">1. Styled Components</a></div>
             </div>
         </div>
     </div>
