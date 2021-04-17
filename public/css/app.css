@@ -146,10 +146,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 80px;
 }
-.course-player .title-group {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.course-player .button-group-margin {
+  margin-top: 60px;
+}
+.course-player .button-group a {
+  color: white;
+  text-decoration: none;
 }
