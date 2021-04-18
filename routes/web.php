@@ -20,7 +20,7 @@ use App\Http\Controllers\Admin\HomeController;
 */
 
 Route::get("/", function(){
-  return redirect("/admin/home");
+  return view("welcome");
 });
 
 Route::get('/login', [AuthController::class, 'login'])->name("login");
