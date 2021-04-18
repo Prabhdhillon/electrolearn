@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class CourseVideoController extends Controller
 {
     public function index(){
-        return view ("coursevideo");
+        return view ("course.video");
     }
 }

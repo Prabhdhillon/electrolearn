@@ -112,15 +112,16 @@ body {
   font-weight: 400;
 }
 
-.course-player .video {
+.course-player .course-video {
   margin-top: 50px;
   filter: drop-shadow(0px 4px 25px rgba(0, 0, 0, 0.15));
-  border-radius: 20px;
+  border-radius: 20px !important;
+  overflow: hidden;
 }
 .course-player .course-player-title {
   font-weight: 700;
   font-size: 28px;
-  margin-top: 20px;
+  margin-top: 100px;
 }
 .course-player .course-player-links {
   font-size: 24px;
@@ -159,4 +160,25 @@ body {
 .course-player .button-group a {
   color: white;
   text-decoration: none;
+}
+
+.video-js-responsive-container.vjs-hd {
+  padding-top: 56.25%;
+}
+
+.video-js-responsive-container.vjs-sd {
+  padding-top: 75%;
+}
+
+.video-js-responsive-container {
+  width: 100%;
+  position: relative;
+}
+
+.video-js-responsive-container .video-js {
+  height: 100% !important;
+  width: 100% !important;
+  position: absolute;
+  top: 0;
+  left: 0;
 }

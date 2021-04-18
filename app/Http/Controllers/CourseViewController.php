@@ -8,6 +8,6 @@ class CourseViewController extends Controller
 {
     public function index()
     {
-        return view("courseview");
+        return view("course.view");
     }
 }

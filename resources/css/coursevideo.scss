@@ -1,25 +1,25 @@
-.course-player{
-    .video{
-        margin-top:50px;
+.course-player {
+    .course-video {
+        margin-top: 50px;
         filter: drop-shadow(0px 4px 25px rgba(0, 0, 0, 0.15));
-        border-radius: 20px;
-        
+        border-radius: 20px !important;
+        overflow: hidden;
     }
-    .course-player-title{
-        font-weight:700;
-        font-size :28px;
-        margin-top:20px;
-    }
-    .course-player-links{
-        font-size:24px;
-        font-weight: 700;
-        margin-top:15px;
 
+    .course-player-title {
+        font-weight: 700;
+        font-size: 28px;
+        margin-top: 100px;
     }
-    .course-player-paragraph{
-        font-size:14px;
-        font-weight:400;
-        margin-top:15px;
+    .course-player-links {
+        font-size: 24px;
+        font-weight: 700;
+        margin-top: 15px;
+    }
+    .course-player-paragraph {
+        font-size: 14px;
+        font-weight: 400;
+        margin-top: 15px;
     }
     .btn-primary {
         width: 180px;
@@ -28,7 +28,8 @@
         border-radius: 100px;
         border: none;
         outline: none;
-    }.btn-secondary {
+    }
+    .btn-secondary {
         width: 180px;
         font-size: 14px;
         font-weight: 700;
@@ -36,17 +37,16 @@
         border: none;
         outline: none;
     }
-    .button-group{
+    .button-group {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    .button-group-margin{
+    .button-group-margin {
         margin-top: 60px;
     }
-    .button-group a{
+    .button-group a {
         color: white;
         text-decoration: none;
-
     }
 }
