@@ -8,6 +8,7 @@ body {
     color: white;
 }
 
+<<<<<<< Updated upstream
 @import "auth.scss";
 @import "course.scss";
 @import "lecture.scss";
@@ -30,3 +31,7 @@ body {
     top: 0;
     left: 0;
 }
+=======
+@import "auth";
+@import "navbar";
+>>>>>>> Stashed changes

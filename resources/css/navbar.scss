@@ -1,0 +1,35 @@
+.navbar-final{
+background-color:transparent;
+}
+.navbar-brand{
+    font-weight: 700;
+}
+.nav-link{
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+
+}
+.nav-link:hover{
+    color: #2A45CF;
+    transition: 0.5s;
+}
+.nav-btn{
+    background-color: #2A45CF;
+    border: 0;
+    font-weight: 700;
+}
+.nav-btn:hover{
+    background-color: #3D57E6;
+    transition: 0.5s;
+}
+.navbar-brand{
+    color:#FFFFFF;
+}
+.navbar-brand:hover{
+    color: #FFFFFF;
+}
+.navbar-toggler{
+    background: #1931a8 !important;
+}
