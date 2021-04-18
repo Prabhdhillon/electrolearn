@@ -29,6 +29,8 @@ Route::get('/register', [AuthController::class, 'register'])->name("register");
 Route::post('/register', [AuthController::class, 'handleRegister']);
 Route::get('/course-overview', [Course\ViewController::class, 'index'])->name("coursovereview");
 Route::get('/course', [Course\VideoController::class, 'index']);
+Route::get('/instructor', [InstructorController::class, 'instructor'])->name("instructor");
+Route::get('/catalogue', [CatalogueController::class, 'catalogue'])->name("catalogue");
 
 Route::get("/admin/home", HomeController::class);
 Route::get("/admin/courses", HomeController::class);
@@ -38,5 +40,4 @@ Route::get("/admin/courses/{course}/upload", HomeController::class);
 Route::get("/admin/change-password", HomeController::class);
 Route::get("/admin/signout", HomeController::class);
 
-Route::get('/instructor', [InstructorController::class, 'instructor'])->name("instructor");
-Route::get('/catalogue', [CatalogueController::class, 'catalogue'])->name("catalogue");
+
