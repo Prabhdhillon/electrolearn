@@ -11,17 +11,19 @@
     font-size: 14px;
 }
 .nav-link:hover {
-    color: #2a45cf;
-    transition: 0.5s;
+    color: #9dabec;
+    transition: 0.1s;
 }
 .nav-btn {
     background-color: #2a45cf;
     border: 0;
     font-weight: 700;
+    padding: 5px 30px;
+    margin-top: -5px;
 }
 .nav-btn:hover {
-    background-color: #3d57e6;
-    transition: 0.5s;
+    background-color: #253ab4;
+    transition: 0.1s;
 }
 .navbar-brand {
     color: #ffffff;

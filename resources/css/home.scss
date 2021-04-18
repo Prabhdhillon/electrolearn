@@ -1,51 +1,10 @@
-body {
-    background-color: #1c1d23;
-    color: white;
-    font-family: "Poppins";
-}
-.navbar-final {
-    background-color: transparent;
-}
-.navbar-brand {
-    font-weight: 700;
-}
-.nav-link {
-    color: #ffffff;
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-}
-.nav-link:hover {
-    color: #9dabec;
-    transition: 0.1s;
-}
-.nav-btn {
-    background-color: #2a45cf;
-    border: 0;
-    font-weight: 700;
-    padding: 5px 30px;
-    margin-top: -5px;
-}
-.nav-btn:hover {
-    background-color: #253ab4;
-    transition: 0.1s;
-}
-.navbar-brand {
-    color: #ffffff;
-}
-.navbar-brand:hover {
-    color: #ffffff;
-}
-.navbar-toggler {
-    background: #1931a8 !important;
-}
 .heading {
     font-weight: 700;
     font-size: 38px;
 }
 
 .section1 {
-    background-image: url("wave1.png");
+    background-image: url("/images/wave1.png");
     z-index: -100000;
     height: 262px;
     background-size: cover;
@@ -474,6 +433,7 @@ body {
     border: 0;
     border-radius: 100px;
     margin-top: 50px;
+    outline: none;
 }
 
 .donations {
@@ -514,138 +474,4 @@ body {
         font-size: 20px;
         color: #0099ff;
     }
-}
-
-.footer-wave {
-    background-image: url("footer-wave.png");
-    height: 262px;
-    background-size: cover;
-    background-position: center;
-}
-.footer-box {
-    background-color: #0099ff;
-    height: 160px;
-    width: auto;
-}
-
-.footer-logo {
-    display: inline-block;
-}
-.footer-brand {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 25px;
-}
-.footer-list {
-    list-style-type: none;
-}
-.footer-list-item {
-    display: inline-block;
-    font-size: 12px;
-    font-weight: 400;
-}
-.footer-copyright {
-    font-size: 12px;
-    font-weight: 400;
-}
-
-.instructor {
-    text-align: center;
-    margin-top: 70px;
-    width: 572px;
-    height: auto;
-}
-.instructor-img {
-    width: 300px;
-    height: auto;
-}
-.instructor-discription {
-    font-size: 12px;
-    text-align: justify;
-}
-.video {
-    margin-top: 100px;
-}
-.video-row {
-    width: 572px;
-    height: auto;
-    margin-top: 30px;
-}
-.video-title {
-    font-size: 16px;
-    font-weight: 700;
-}
-.video-instructor {
-    font-size: 12px;
-    font-weight: 400;
-    display: inline-block;
-}
-.video-time {
-    font-size: 12px;
-    font-weight: 400;
-    display: inline-block;
-    float: right;
-}
-.video-discription {
-    font-size: 12px;
-    font-weight: 400;
-    text-align: justify;
-}
-.video-btn {
-    width: 86px;
-    height: 20px;
-    border-radius: 100px;
-    color: #ffffff;
-    background-color: #773dd6;
-    font-size: 8px;
-    font-weight: 400;
-}
-.buttons {
-    text-align: center;
-    margin-top: 100px;
-}
-.buttons-para {
-    color: #2a2c38;
-    font-size: 10px;
-}
-.button-prev {
-    background-color: #30313a;
-    width: 106px;
-    height: 30px;
-    color: #4a4c5a;
-    font-size: 12px;
-    border-radius: 100px;
-}
-.button-next {
-    background-color: #224eff;
-    width: 75px;
-    height: 30px;
-    color: #fff;
-    font-size: 12px;
-    border-radius: 100px;
-}
-.catalogue {
-    margin-top: 80px;
-}
-.catalogue-title {
-    font-size: 56px;
-    font-weight: 700;
-    text-align: center;
-}
-.search-box {
-    width: 572px;
-    height: 30px;
-    background-color: #242630;
-    color: #474e71;
-    font-size: 12px;
-    font-weight: 400;
-    border-radius: 100px;
-    padding-top: 5px;
-    margin-top: 50px;
-}
-.gsearch {
-    background-color: #242630;
-    border: 0;
-    border-radius: 100px;
 }
