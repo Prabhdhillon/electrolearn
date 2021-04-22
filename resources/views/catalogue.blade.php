@@ -28,13 +28,13 @@
 
                 <div class="col"><img src="{{ asset('images/video.png') }}" class="video-img"></div>
                 <div class="col">
-                    <h6 class="video-title">Streaming for Bignners</h6>
+                    <h6 class="video-title">Streaming for Beginners</h6>
                     <h6 class="video-instructor">By Micheal G.</h6>
                     <h6 class="video-time">1hr20min</h6>
                     <p class="video-discription">Lorem ipsum dolor sit amet,
                         consectetur adipiscing elit. Integer vulputate sed sapien sed sollicitudin.
                         non aliquam arcu finibus vel.</p>
-                    <button class="video-btn btn">BIGNNER</button>
+                    <button class="video-btn btn">START</button>
 
                 </div>
             </div>
@@ -42,13 +42,13 @@
 
                 <div class="col"><img src="{{ asset('images/video.png') }}" class="video-img"></div>
                 <div class="col">
-                    <h6 class="video-title">Streaming for Bignners</h6>
+                    <h6 class="video-title">Streaming for Beginners</h6>
                     <h6 class="video-instructor">By Micheal G.</h6>
                     <h6 class="video-time">1hr20min</h6>
                     <p class="video-discription">Lorem ipsum dolor sit amet,
                         consectetur adipiscing elit. Integer vulputate sed sapien sed sollicitudin.
                         non aliquam arcu finibus vel.</p>
-                    <button class="video-btn btn">BIGNNER</button>
+                    <button class="video-btn btn">START</button>
 
                 </div>
             </div>
