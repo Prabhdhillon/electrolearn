@@ -33,8 +33,8 @@ Route::get('/instructor', [InstructorController::class, 'instructor'])->name("in
 Route::get('/catalogue', [CatalogueController::class, 'catalogue'])->name("catalogue");
 
 Route::get("/admin/home", HomeController::class);
-Route::get("/admin/courses", HomeController::class);
-Route::get("/admin/courses/new", HomeController::class);
+Route::get("/admin/courses", [HomeController::class, '']);
+Route::get("/admin/courses/new", [HomeController::class, 'upload']);
 Route::get("/admin/courses/{course}", HomeController::class);
 Route::get("/admin/courses/{course}/upload", HomeController::class);
 Route::get("/admin/change-password", HomeController::class);

@@ -33,7 +33,7 @@
             </main>
             <!-- END Main Container -->
 
-           <x-admin.footer></x-admin.footer>
+           <x-admin.footer/>
         </div>
         <!-- END Page Container -->
 

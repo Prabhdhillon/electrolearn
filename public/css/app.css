@@ -304,7 +304,7 @@ body {
     border-radius: 100px;
     color: #ffffff;
     background-color: #773dd6;
-    font-size: 8px;
+    font-size: 10px;
     font-weight: 400;
 }
 
@@ -429,7 +429,6 @@ body {
     .introduction-btn {
         width: 100px;
         height: 30px;
-        font-size: 8px;
         background-color: #2a2b35;
         color: #ffffff;
         border-radius: 100px;

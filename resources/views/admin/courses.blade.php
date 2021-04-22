@@ -22,6 +22,24 @@
     <div class="content">
         <h2 class="content-heading">Page Subtitle</h2>
         <p>Your content..</p>
+
+
+        <div class="form-group">
+            <label for="example-text-input">Title</label>
+            <input type="text" class="form-control" id="example-text-input" name="example-text-input"
+                placeholder="Text Input">
+        </div>
+        <div class="form-group">
+            <label for="example-email-input">Author</label>
+            <input type="email" class="form-control" id="example-email-input" name="example-email-input"
+                placeholder="Emai Input">
+        </div>
+        <div class="form-group">
+            <label for="example-textarea-input">Description</label>
+            <textarea class="form-control" id="example-textarea-input" name="example-textarea-input" rows="4"
+                placeholder="Textarea content.."></textarea>
+        </div>
+    </div>
     </div>
     <!-- END Page Content -->
 @endsection
