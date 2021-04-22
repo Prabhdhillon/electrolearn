@@ -1,6 +1,6 @@
 @extends("layout.admin")
 @section('title')
-    Upload Course
+    Upload Videos
 @endsection
 @section('content')
 
@@ -12,10 +12,14 @@
         <div class="form-group">
             <label for="description">Description</label>
             <textarea class="form-control" id="description" name="description" rows="4"
-                placeholder="Enter the course description"></textarea>
+                placeholder="Enter the video description"></textarea>
         </div>
         <x-admin.admin-upload label="Enter the Tools Used" id="tools" type="text" placeholder="Enter the Tools" />
         <div class="form-group">
+            <label for="file">Upload Video:</label>
+            <input type="file" id="file" name="file">
+        </div>
+        <div>
             <label for="thumbnail">Upload Thumbnail:</label>
             <input type="file" id="thumbnail" name="thumbnail">
         </div>

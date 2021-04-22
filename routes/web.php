@@ -34,7 +34,9 @@ Route::get('/catalogue', [CatalogueController::class, 'catalogue'])->name("catal
 
 Route::get("/admin/home", HomeController::class);
 Route::get("/admin/courses", [HomeController::class, '']);
-Route::get("/admin/courses/new", [HomeController::class, 'upload']);
+Route::get("/admin/courses/new", [HomeController::class, 'upload_course']);
+Route::get("/admin/courses/videos", [HomeController::class, '']);
+Route::get("/admin/courses/videos/new", [HomeController::class, 'upload_videos']);
 Route::get("/admin/courses/{course}", HomeController::class);
 Route::get("/admin/courses/{course}/upload", HomeController::class);
 Route::get("/admin/change-password", HomeController::class);
