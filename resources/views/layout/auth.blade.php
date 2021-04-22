@@ -30,8 +30,8 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
 
-                            <a class="navbar-brand" href="#"> <img class="me-1" src="{{ asset('images/logo.png') }}"
-                                    width="25" height="25">ElectroLearn</a>
+                            <a class="navbar-brand" href="{{ '/' }}"> <img class="me-1"
+                                    src="{{ asset('images/logo.png') }}" width="25" height="25">ElectroLearn</a>
                             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
                                     <a class="nav-link me-5" aria-current="page" href="#">Browse</a>
