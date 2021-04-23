@@ -7,6 +7,7 @@ use App\Http\Controllers\InstructorController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\AdminAuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,8 +34,9 @@ Route::get('/instructor', [InstructorController::class, 'instructor'])->name("in
 Route::get('/catalogue', [CatalogueController::class, 'catalogue'])->name("catalogue");
 
 Route::get("/admin/home", HomeController::class);
-Route::get("/admin/courses", [HomeController::class, '']);
+Route::get("/admin/register", [AdminAuthController::class, 'register']);
 Route::get("/admin/courses/new", [HomeController::class, 'upload_course']);
+Route::post("/admin/courses/new", [HomeController::class, 'store'])->name("course_create_submit");
 Route::get("/admin/courses/videos", [HomeController::class, '']);
 Route::get("/admin/courses/videos/new", [HomeController::class, 'upload_videos']);
 Route::get("/admin/courses/{course}", HomeController::class);
