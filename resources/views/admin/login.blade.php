@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-    <title>Dashmix - Bootstrap 4 Admin Template &amp; UI Framework</title>
+    <title>Admin Login</title>
 
     <meta name="description"
         content="Dashmix - Bootstrap 4 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
@@ -31,7 +31,7 @@
     <!-- Stylesheets -->
     <!-- Fonts and Dashmix framework -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
-    <link rel="stylesheet" id="css-main" href="http://127.0.0.1:8000/css/dashmix.min.css">
+    <link rel="stylesheet" id="css-main" href="{{ asset('css/dashmix.min.css') }}">
 
     <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
     <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/xwork.min.css"> -->
@@ -45,56 +45,63 @@
         <!-- Main Container -->
         <main id="main-container">
             <!-- Page Content -->
-            <div class="bg-image" style="background-image: url('assets/media/photos/photo12@2x.jpg');">
-                <div class="row no-gutters justify-content-center bg-black-75">
+            <div class="bg-image" style="background-image: url('/media/photos/photo22@2x.jpg');">
+                <div class="row no-gutters bg-primary-op">
                     <!-- Main Section -->
                     <div class="hero-static col-md-6 d-flex align-items-center bg-white">
                         <div class="p-3 w-100">
                             <!-- Header -->
                             <div class="mb-3 text-center">
-                                <a class="link-fx text-success font-w700 font-size-h1" href="index.html">
-                                    <span class="text-dark">Dash</span><span class="text-success">mix</span>
+                                <a class="link-fx font-w700 font-size-h1" href="index.html">
+                                    <span class="text-dark">Electro</span><span class="text-primary">learn</span>
                                 </a>
-                                <p class="text-uppercase font-w700 font-size-sm text-muted">Create New Account</p>
+                                <p class="text-uppercase font-w700 font-size-sm text-muted">Sign In</p>
                             </div>
                             <!-- END Header -->
 
-                            <!-- Sign Up Form -->
-
+                            <!-- Sign In Form -->
+                            <!-- jQuery Validation (.js-validation-signin class is initialized in js/pages/op_auth_signin.min.js which was auto compiled from _js/pages/op_auth_signin.js) -->
+                            <!-- For more info and examples you can check out https://github.com/jzaefferer/jquery-validation -->
                             <div class="row no-gutters justify-content-center">
                                 <div class="col-sm-8 col-xl-6">
-                                    <form class="js-validation-signup" action="be_pages_auth_all.html" method="POST">
+                                    <form action="" method="POST">
+                                        @csrf
                                         <div class="py-3">
                                             <div class="form-group">
                                                 <input type="text" class="form-control form-control-lg form-control-alt"
-                                                    id="signup-username" name="signup-username" placeholder="Name">
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="email"
-                                                    class="form-control form-control-lg form-control-alt"
-                                                    id="signup-email" name="signup-email" placeholder="Email">
+                                                    id="email" name="email" placeholder="Email">
                                             </div>
                                             <div class="form-group">
                                                 <input type="password"
-                                                    class="form-control form-control-lg form-control-alt"
-                                                    id="signup-password" name="signup-password" placeholder="Password">
+                                                    class="form-control form-control-lg form-control-alt" id="passowrd"
+                                                    name="passowrd" placeholder="Password">
                                             </div>
-
-
                                         </div>
                                         <div class="form-group">
-                                            <button type="submit" class="btn btn-block btn-hero-lg btn-hero-success">
-                                                <i class="fa fa-fw fa-plus mr-1"></i> Sign Up
+                                            <button type="submit" class="btn btn-block btn-hero-lg btn-hero-primary">
+                                                <i class="fa fa-fw fa-sign-in-alt mr-1"></i> Sign In
                                             </button>
 
                                         </div>
                                     </form>
                                 </div>
                             </div>
-                            <!-- END Sign Up Form -->
+                            <!-- END Sign In Form -->
                         </div>
                     </div>
                     <!-- END Main Section -->
+
+                    <!-- Meta Info Section -->
+                    <div
+                        class="hero-static col-md-6 d-none d-md-flex align-items-md-center justify-content-md-center text-md-center">
+                        <div class="p-3">
+                            <p class="display-4 font-w700 text-white mb-3">
+                                Welcome to Electrolearn
+                            </p>
+
+                        </div>
+                    </div>
+                    <!-- END Meta Info Section -->
                 </div>
             </div>
             <!-- END Page Content -->
@@ -103,7 +110,22 @@
     </div>
     <!-- END Page Container -->
 
+    <!--
+            Dashmix JS Core
 
+            Vital libraries and plugins used in all pages. You can choose to not include this file if you would like
+            to handle those dependencies through webpack. Please check out assets/_js/main/bootstrap.js for more info.
+
+            If you like, you could also include them separately directly from the assets/js/core folder in the following
+            order. That can come in handy if you would like to include a few of them (eg jQuery) from a CDN.
+
+            assets/js/core/jquery.min.js
+            assets/js/core/bootstrap.bundle.min.js
+            assets/js/core/simplebar.min.js
+            assets/js/core/jquery-scrollLock.min.js
+            assets/js/core/jquery.appear.min.js
+            assets/js/core/js.cookie.min.js
+        -->
     <script src="assets/js/dashmix.core.min.js"></script>
 
     <!--
@@ -118,7 +140,7 @@
     <script src="assets/js/plugins/jquery-validation/jquery.validate.min.js"></script>
 
     <!-- Page JS Code -->
-    <script src="assets/js/pages/op_auth_signup.min.js"></script>
+    <script src="assets/js/pages/op_auth_signin.min.js"></script>
 </body>
 
 </html>

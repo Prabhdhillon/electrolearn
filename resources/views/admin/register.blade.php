@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-    <title>Dashmix - Bootstrap 4 Admin Template &amp; UI Framework</title>
+    <title>Admin Register</title>
 
     <meta name="description"
         content="Dashmix - Bootstrap 4 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
@@ -45,7 +45,7 @@
         <!-- Main Container -->
         <main id="main-container">
             <!-- Page Content -->
-            <div class="bg-image" style="background-image: url('assets/media/photos/photo12@2x.jpg');">
+            <div class="bg-image" style="background-image: url('/media/photos/photo12@2x.jpg');">
                 <div class="row no-gutters justify-content-center bg-black-75">
                     <!-- Main Section -->
                     <div class="hero-static col-md-6 d-flex align-items-center bg-white">
@@ -53,7 +53,7 @@
                             <!-- Header -->
                             <div class="mb-3 text-center">
                                 <a class="link-fx text-success font-w700 font-size-h1" href="index.html">
-                                    <span class="text-dark">Dash</span><span class="text-success">mix</span>
+                                    <span class="text-dark">Electro</span><span class="text-success">Learn</span>
                                 </a>
                                 <p class="text-uppercase font-w700 font-size-sm text-muted">Create New Account</p>
                             </div>
@@ -63,22 +63,39 @@
 
                             <div class="row no-gutters justify-content-center">
                                 <div class="col-sm-8 col-xl-6">
-                                    <form class="js-validation-signup" action="be_pages_auth_all.html" method="POST">
+                                    <form action="" method="POST">
+                                        @csrf
                                         <div class="py-3">
                                             <div class="form-group">
                                                 <input type="text" class="form-control form-control-lg form-control-alt"
-                                                    id="signup-username" name="signup-username" placeholder="Name">
+                                                    id="name" name="name" placeholder="Name">
+                                                @error('name')
+                                                    <div class="text-danger">
+                                                        {{ $message }}
+                                                    </div>
+                                                @enderror
                                             </div>
                                             <div class="form-group">
                                                 <input type="email"
-                                                    class="form-control form-control-lg form-control-alt"
-                                                    id="signup-email" name="signup-email" placeholder="Email">
+                                                    class="form-control form-control-lg form-control-alt" id="email"
+                                                    name="email" placeholder="Email">
+                                                @error('email')
+                                                    <div class="text-danger">
+                                                        {{ $message }}
+                                                    </div>
+                                                @enderror
                                             </div>
                                             <div class="form-group">
                                                 <input type="password"
-                                                    class="form-control form-control-lg form-control-alt"
-                                                    id="signup-password" name="signup-password" placeholder="Password">
+                                                    class="form-control form-control-lg form-control-alt" id="password"
+                                                    name="password" placeholder="Password">
+                                                @error('password')
+                                                    <div class="text-danger">
+                                                        {{ $message }}
+                                                    </div>
+                                                @enderror
                                             </div>
+
 
 
                                         </div>

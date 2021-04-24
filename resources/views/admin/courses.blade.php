@@ -7,7 +7,7 @@
 
     <!-- Page Content -->
     <div class="content">
-        <form action="{{ route('course_create_submit') }}" method="post" enctype="multipart/form-data">
+        <form action="{{ route('course_create_submit') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <x-admin.input label="Enter the Title" id="title" type="text" placeholder="Enter the Title" />
             <x-admin.input label="Description" id="description" type="textarea" placeholder="Enter your description" />

@@ -6,7 +6,7 @@
     <div class="auth">
         <div class="container">
             <h2 class="title " style="text-align:center;">Get Started for FREE!</h2>
-            <form class="form" method="post">
+            <form class="form" method="POST">
                 @csrf
                 <x-auth-field label="Your Name" id="name" type="text" />
                 <x-auth-field label="Email address" id="email" type="email" />

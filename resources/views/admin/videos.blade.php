@@ -7,7 +7,7 @@
 
     <!-- Page Content -->
     <div class="content">
-        <form action="" method="post" enctype="multipart/form-data">
+        <form action="" method="POST" enctype="multipart/form-data">
             @csrf
             <x-admin.admin-upload label="Enter the Title" id="title" type="text" placeholder="Enter the title" />
 

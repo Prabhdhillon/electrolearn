@@ -34,7 +34,10 @@ Route::get('/instructor', [InstructorController::class, 'instructor'])->name("in
 Route::get('/catalogue', [CatalogueController::class, 'catalogue'])->name("catalogue");
 
 Route::get("/admin/home", HomeController::class);
-Route::get("/admin/register", [AdminAuthController::class, 'register']);
+Route::get("/admin/newuser", [AdminAuthController::class, 'register']);
+Route::post("/admin/newuser", [AdminAuthController::class, 'handleRegister']);
+Route::get("/admin/login", [AdminAuthController::class, 'login']);
+Route::post("/admin/login", [AdminAuthController::class, 'handleLogin']);
 Route::get("/admin/courses/new", [HomeController::class, 'upload_course']);
 Route::post("/admin/courses/new", [HomeController::class, 'store'])->name("course_create_submit");
 Route::get("/admin/courses/videos", [HomeController::class, '']);
