@@ -23,7 +23,7 @@ class AuthController extends Controller
         // dd($formdata);
         $validaterequest = request()->validate([
             'name' => 'required|min:3|max:120 ',
-            'email' => 'required|email',
+            'email' => 'required|email|unique:users',
             'password' => 'required|min:8|confirmed',
             'password_confirmation' => 'required|min:8',
             'work' => 'required|alpha',
@@ -32,7 +32,7 @@ class AuthController extends Controller
             $user->password=Hash::make($user->password);
             $user->save();
         
-            return redirect()->back();
+            return redirect()->back()->with('message', 'Your Are Registered!');
     }
     public function handleLogin()
     {

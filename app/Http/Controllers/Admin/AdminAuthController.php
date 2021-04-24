@@ -15,14 +15,15 @@ class AdminAuthController extends Controller
     public function handleRegister(){
         $validatedRequest=request()->validate([
             "name"=>'required|',
-            "email"=>'required|email',
+            "email"=>'required|email|unique:admins',
             'password' => 'required|min:8|'
         ]);
             
         $admin=new Admin($validatedRequest);
         $admin->password=Hash::make($admin->password);
         $admin->save();
-        return redirect()->back();
+        return redirect()->back()->with('message', 'Your Are Registered!');
+        
         
     }
     public function login(){

@@ -9,7 +9,7 @@
     <div class="content">
         <form action="" method="POST" enctype="multipart/form-data">
             @csrf
-            <x-admin.admin-upload label="Enter the Title" id="title" type="text" placeholder="Enter the title" />
+            <x-admin.input label="Enter the Title" id="title" type="text" placeholder="Enter the title" />
 
             <div class="form-group">
                 <label for="description">Description</label>
@@ -21,9 +21,6 @@
                     </div>
                 @enderror
             </div>
-
-
-
             <div class="form-group">
                 <label for="file">Upload Video</label>
                 <input type="file" id="file" name="file">

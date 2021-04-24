@@ -62,8 +62,10 @@
                             <!-- Sign Up Form -->
 
                             <div class="row no-gutters justify-content-center">
+
                                 <div class="col-sm-8 col-xl-6">
                                     <form action="" method="POST">
+
                                         @csrf
                                         <div class="py-3">
                                             <div class="form-group">
@@ -105,6 +107,11 @@
                                             </button>
 
                                         </div>
+                                        @if (session()->has('message'))
+                                            <div class="alert alert-success">
+                                                {{ session()->get('message') }}
+                                            </div>
+                                        @endif
                                     </form>
                                 </div>
                             </div>

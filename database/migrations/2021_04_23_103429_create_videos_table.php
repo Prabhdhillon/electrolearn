@@ -17,6 +17,7 @@ class CreateVideosTable extends Migration
             $table->id();
             $table->string('title');
             $table->text('description');
+            $table->string('slug');
             $table->string('file');
             $table->string('thumbnail');
             $table->timestamps();

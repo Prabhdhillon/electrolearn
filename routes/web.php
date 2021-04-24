@@ -42,6 +42,7 @@ Route::get("/admin/courses/new", [HomeController::class, 'upload_course']);
 Route::post("/admin/courses/new", [HomeController::class, 'store'])->name("course_create_submit");
 Route::get("/admin/courses/videos", [HomeController::class, '']);
 Route::get("/admin/courses/videos/new", [HomeController::class, 'upload_videos']);
+Route::post("/admin/courses/videos/new", [HomeController::class, 'store_videos']);
 Route::get("/admin/courses/{course}", HomeController::class);
 Route::get("/admin/courses/{course}/upload", HomeController::class);
 Route::get("/admin/change-password", HomeController::class);
