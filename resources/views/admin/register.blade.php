@@ -97,9 +97,6 @@
                                                     </div>
                                                 @enderror
                                             </div>
-
-
-
                                         </div>
                                         <div class="form-group">
                                             <button type="submit" class="btn btn-block btn-hero-lg btn-hero-success">
@@ -107,9 +104,9 @@
                                             </button>
 
                                         </div>
-                                        @if (session()->has('message'))
+                                        @if (session()->has('success'))
                                             <div class="alert alert-success">
-                                                {{ session()->get('message') }}
+                                                {{ session()->get('success') }}
                                             </div>
                                         @endif
                                     </form>

@@ -34,18 +34,30 @@ Route::get('/instructor', [InstructorController::class, 'instructor'])->name("in
 Route::get('/catalogue', [CatalogueController::class, 'catalogue'])->name("catalogue");
 
 Route::get("/admin/home", HomeController::class);
+
+Route::get("/admin/profile", [HomeController::class, 'profile']);
+Route::get("/admin/edit-profile", [HomeController::class, 'edit_profile']);
+
 Route::get("/admin/newuser", [AdminAuthController::class, 'register']);
 Route::post("/admin/newuser", [AdminAuthController::class, 'handleRegister']);
+
 Route::get("/admin/login", [AdminAuthController::class, 'login']);
 Route::post("/admin/login", [AdminAuthController::class, 'handleLogin']);
+
+Route::get("/admin/courses", [HomeController::class, 'all_courses']);
 Route::get("/admin/courses/new", [HomeController::class, 'upload_course']);
 Route::post("/admin/courses/new", [HomeController::class, 'store'])->name("course_create_submit");
+
 Route::get("/admin/courses/videos", [HomeController::class, '']);
 Route::get("/admin/courses/videos/new", [HomeController::class, 'upload_videos']);
 Route::post("/admin/courses/videos/new", [HomeController::class, 'store_videos']);
+
 Route::get("/admin/courses/{course}", HomeController::class);
 Route::get("/admin/courses/{course}/upload", HomeController::class);
-Route::get("/admin/change-password", HomeController::class);
+
+Route::get("/admin/change-password", [AdminAuthController::class,'change_password']);
+Route::post("/admin/change-password", [AdminAuthController::class,'handlePassword']);
+
 Route::get("/admin/signout", HomeController::class);
 
 

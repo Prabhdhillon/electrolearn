@@ -32,23 +32,28 @@ class AuthController extends Controller
             $user->password=Hash::make($user->password);
             $user->save();
         
-            return redirect()->back()->with('message', 'Your Are Registered!');
+            return redirect()->back()->with('success', 'Your Are Registered!');
     }
     public function handleLogin()
     {
 
-        $validaterequest = request()->validate([
-
+        $validatedRequest = request()->validate([
             'email' => 'required',
             'password' => 'required|min:8',
-
-            
         ]);
-        $user=User::where(["email"=>request()->email])->first();
+
+        $user=User::where[('email'=> $validatedRequest["email")]->first();
         if($user==null){
             return("Email not found");
         }
         $user_verified=Hash::check(request()->password,$user->password);
-        Auth::login($user);
+        if($user_verified){
+        Auth::login($user); 
+        echo"Welcome";
+        }
+        else{
+            echo"password is incorrect";
+        }
     }
-}
+    }
+

@@ -1,5 +1,7 @@
 @extends("layout.admin")
-
+@section('title')
+    Home
+@endsection
 @section('content')
 
 

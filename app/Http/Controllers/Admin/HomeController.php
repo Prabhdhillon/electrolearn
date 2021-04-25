@@ -14,6 +14,17 @@ class HomeController extends Controller
     public function __invoke(){
       return view("admin.home");
     }
+
+    public function profile(){
+      return view("admin.profile");
+    }
+    public function edit_profile(){
+      return view("admin.editprofile");
+    }
+    public function all_courses(){
+      return view("admin.allcourses");
+    }
+
     public function upload_course(){
       return view("admin.courses");
     }
@@ -27,7 +38,6 @@ class HomeController extends Controller
       ]);
 
       $course = new Course($validatedRequest);
-
       $course->thumbnail = request()->file("thumbnail")->store("uploads");
       $course->slug = Str::kebab($course->title);
       

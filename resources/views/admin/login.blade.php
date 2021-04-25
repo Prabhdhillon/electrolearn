@@ -70,11 +70,21 @@
                                             <div class="form-group">
                                                 <input type="text" class="form-control form-control-lg form-control-alt"
                                                     id="email" name="email" placeholder="Email">
+                                                @error('email')
+                                                    <div class="text-danger">
+                                                        {{ $message }}
+                                                    </div>
+                                                @enderror
                                             </div>
                                             <div class="form-group">
                                                 <input type="password"
-                                                    class="form-control form-control-lg form-control-alt" id="passowrd"
-                                                    name="passowrd" placeholder="Password">
+                                                    class="form-control form-control-lg form-control-alt" id="password"
+                                                    name="password" placeholder="Password">
+                                                @error('password')
+                                                    <div class="text-danger">
+                                                        {{ $message }}
+                                                    </div>
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="form-group">

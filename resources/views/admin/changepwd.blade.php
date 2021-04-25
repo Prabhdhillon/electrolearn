@@ -1,6 +1,6 @@
 @extends('layout.admin')
 @section('title')
-    Upload Course
+    Change Password
 @endsection
 @section('content')
 
@@ -9,12 +9,10 @@
     <div class="content">
         <form action="" method="POST" enctype="multipart/form-data">
             @csrf
-            <x-admin.input label="Enter the Title" id="title" type="text" placeholder="Enter the Title" />
-            <x-admin.input label="Description" id="description" type="textarea" placeholder="Enter your description" />
-            <x-admin.input label="Tools" id="tools" type="text" placeholder="Enter the Tools Used" />
-            <x-admin.input label="Upload Thumbnail" id="thumbnail" type="file" />
-
-
+            <x-admin.input label="Enter Old Password" id="password" type="password" placeholder="Old Password" />
+            <x-admin.input label="Enter New Password" id="new_password" type="password" placeholder="New Password" />
+            <x-admin.input label="Confirm New Password" id="new_password_confirmation" type="password"
+                placeholder="Confirm New Password" />
             <div class="form-group-button">
                 <button type="submit" class="btn btn-primary mt-3">Submit</button>
 

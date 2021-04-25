@@ -34,13 +34,20 @@
         <!-- Side Navigation -->
         <div class="content-side">
             <ul class="nav-main">
+
+                <li class="nav-main-heading">Courses</li>
                 <li class="nav-main-item">
-                    <a class="nav-main-link" href="be_pages_dashboard.html">
+                    <a class="nav-main-link" href="{{ '/admin/profile' }}">
                         <i class="nav-main-link-icon fa fa-location-arrow"></i>
-                        <span class="nav-main-link-name">Dashboard</span>
+                        <span class="nav-main-link-name">Profile</span>
                     </a>
                 </li>
-                <li class="nav-main-heading">Courses</li>
+                <li class="nav-main-item">
+                    <a class="nav-main-link" href="{{ '/admin/courses' }}">
+                        <i class="nav-main-link-icon fa fa-location-arrow"></i>
+                        <span class="nav-main-link-name">My Courses</span>
+                    </a>
+                </li>
                 <li class="nav-main-item">
                     <a class="nav-main-link" href="{{ '/admin/courses/new' }}">
                         <i class="nav-main-link-icon fa fa-location-arrow"></i>
@@ -53,13 +60,13 @@
                         <span class="nav-main-link-name">Upload Videos</span>
                     </a>
                 </li>
+                <li class="nav-main-heading">Profile</li>
                 <li class="nav-main-item">
-                    <a class="nav-main-link" href="be_pages_dashboard.html">
+                    <a class="nav-main-link" href="{{ '/admin/edit-profile' }}">
                         <i class="nav-main-link-icon fa fa-location-arrow"></i>
-                        <span class="nav-main-link-name">My Courses</span>
+                        <span class="nav-main-link-name">Edit Profile</span>
                     </a>
                 </li>
-                <li class="nav-main-heading">Profile</li>
                 <li class="nav-main-item">
                     <a class="nav-main-link" href="be_pages_dashboard.html">
                         <i class="nav-main-link-icon fa fa-location-arrow"></i>

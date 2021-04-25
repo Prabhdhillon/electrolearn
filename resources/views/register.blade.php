@@ -17,9 +17,9 @@
                     <button type="submit" class="btn btn-primary">Create account</button>
                     <a href="" class="btn-link">Already have an account?</a>
                 </div>
-                @if (session()->has('message'))
+                @if (session()->has('success'))
                     <div class="alert alert-success mt-3">
-                        {{ session()->get('message') }}
+                        {{ session()->get('success') }}
                     </div>
                 @endif
             </form>
