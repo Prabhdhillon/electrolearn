@@ -8,7 +8,8 @@ use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\AdminAuthController;
-use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Admin\CourseController;
+use App\Http\Controllers\Admin\ProfileController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -52,16 +53,17 @@ Route::get("/signout", function () {
 
 Route::middleware("auth")->group(function () {
   Route::get("/admin/home", HomeController::class);
-  Route::get("/admin/profile", [HomeController::class, 'profile']);
-  Route::get("/admin/edit-profile", [HomeController::class, 'edit_profile']);
-  Route::get("/admin/courses", [HomeController::class, 'all_courses']);
-  Route::get("/admin/courses/new", [HomeController::class, 'upload_course']);
-  Route::post("/admin/courses/new", [HomeController::class, 'store'])->name("course_create_submit");
-  Route::get("/admin/courses/{course}/videos", [HomeController::class, '']);
-  Route::get("/admin/courses/{course}/videos/new", [HomeController::class, 'upload_videos']);
-  Route::post("/admin/courses/{course}/videos/new", [HomeController::class, 'store_videos']);
-  Route::get("/admin/courses/{course}", HomeController::class);
-  Route::get("/admin/courses/{course}/upload", HomeController::class);
+  Route::get("/admin/profile", [ProfileController::class, 'profile']);
+  Route::get("/admin/edit-profile", [ProfileController::class, 'edit_profile']);
+  Route::post("/admin/edit-profile", [ProfileController::class, 'update_profile']);
+  Route::get("/admin/courses", [CourseController::class, 'all_courses']);
+  Route::get("/admin/courses/new", [CourseController::class, 'upload_course']);
+  Route::post("/admin/courses/new", [CourseController::class, 'store'])->name("course_create_submit");
+  Route::get("/admin/courses/{course}/videos", [CourseController::class, '']);
+  Route::get("/admin/courses/{course}/videos/new", [CourseController::class, 'upload_videos']);
+  Route::post("/admin/courses/{course}/videos/new", [CourseController::class, 'store_videos']);
+  // Route::get("/admin/courses/{course}", CourseController::class);
+  // Route::get("/admin/courses/{course}/upload", CourseController::class);
   Route::get("/admin/change-password", [AdminAuthController::class, 'change_password']);
   Route::post("/admin/change-password", [AdminAuthController::class, 'handlePassword']);
 });

@@ -17,10 +17,10 @@
             <!-- Logo -->
             <a class="font-w600 text-white tracking-wide" href="index.html">
                 <span class="smini-visible">
-                    D<span class="opacity-75">x</span>
+                    E<span class="opacity-75">n</span>
                 </span>
                 <span class="smini-hidden">
-                    Dash<span class="opacity-75">mix</span>
+                    Electr<span class="opacity-75">learn</span>
                 </span>
             </a>
             <!-- END Logo -->
