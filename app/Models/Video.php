@@ -10,4 +10,9 @@ class Video extends Model
     use HasFactory;
 
     protected $guarded = [];
+
+    function course()
+    {
+        return $this->belongsTo(Course::class, "course_id");
+    }
 }

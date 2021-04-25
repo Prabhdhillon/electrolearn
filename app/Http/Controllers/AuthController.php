@@ -55,12 +55,11 @@ class AuthController extends Controller
             return redirect()->back()->with("error", "wrong email / password");
         }
 
-        if ($user->is_instructor)
+        if ($user->is_instructor) {
             return redirect("/admin/login");
-        else {
-            return redirect()->back();
         }
+
         Auth::login($user);
-        return redirect('/admin/home');
+        return redirect('/');
     }
 }

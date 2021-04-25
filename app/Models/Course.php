@@ -12,4 +12,9 @@ class Course extends Model
     protected $table = "course";
 
     protected $guarded = [];
+
+    function videos()
+    {
+        return $this->hasMany(Video::class, "course_id");
+    }
 }

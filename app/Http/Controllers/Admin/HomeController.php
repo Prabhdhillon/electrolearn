@@ -28,7 +28,8 @@ class HomeController extends Controller
   }
   public function all_courses()
   {
-    return view("admin.allcourses");
+    $courses = Course::get();
+    return view("admin.allcourses")->with("courses", $courses);
   }
 
   public function upload_course()
@@ -48,9 +49,7 @@ class HomeController extends Controller
     $course = new Course($validatedRequest);
     $course->thumbnail = request()->file("thumbnail")->store("uploads");
     $course->slug = Str::kebab($course->title);
-
-    // $course->author = Auth::user()->id;
-
+    $course->author_id = Auth::user()->id;
     $course->save();
 
     // return redirect()->back();
@@ -65,7 +64,7 @@ class HomeController extends Controller
     $validatedRequest = request()->validate([
       'title' => 'required|min:3|max:120',
       'description' => 'required',
-      'file' => 'required|file|max:2000',
+      'file' => 'required|file|',
       'thumbnail' => 'required|file|max:2000',
     ]);
 
@@ -74,6 +73,8 @@ class HomeController extends Controller
     $video->file = request()->file("file")->store("uploads");
     $video->thumbnail = request()->file("thumbnail")->store("uploads");
     $video->slug = Str::kebab($video->title);
+    $video->author_id = Auth::user()->id;
+    $video->course_id;
     $video->save();
   }
 }

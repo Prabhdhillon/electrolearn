@@ -33,19 +33,36 @@
                             <a class="navbar-brand" href="{{ '/' }}"> <img class="me-1"
                                     src="{{ asset('images/logo.png') }}" width="25" height="25">ElectroLearn</a>
                             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                                <li class="nav-item">
-                                    <a class="nav-link me-5" aria-current="page" href="#">Browse</a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a class="nav-link me-5 " href="#">Disciplines</a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a class="nav-link me-5" href="#">Certificates</a>
-                                </li>
-                                <li class="nav-item ml-3">
-                                    <a class="nav-link" href="#"><button type="button"
-                                            class="btn btn-sm btn-secondary nav-btn">Get Started</button></a>
-                                </li>
+                                @auth
+                                    <li class="nav-item">
+                                        <a class="nav-link me-5" aria-current="page" href="#">Browse</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a class="nav-link me-5 " href="#">Disciplines</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a class="nav-link me-5" href="/catalogue">Courses</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a class="nav-link me-5" href="/signout"><button type="button"
+                                                class="btn btn-sm btn-secondary nav-btn">Sign Out</button></a>
+                                    </li>
+                                @else
+
+                                    <li class="nav-item">
+                                        <a class="nav-link me-5" aria-current="page" href="#">Browse</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a class="nav-link me-5 " href="#">Disciplines</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a class="nav-link me-5" href="#">Certificates</a>
+                                    </li>
+                                    <li class="nav-item ml-3">
+                                        <a class="nav-link" href="#"><button type="button"
+                                                class="btn btn-sm btn-secondary nav-btn">Get Started</button></a>
+                                    </li>
+                                @endauth
                             </ul>
 
                         </div>

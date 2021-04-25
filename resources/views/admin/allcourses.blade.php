@@ -4,7 +4,10 @@
 @endsection
 @section('content')
 
-
-    {{-- Make sure to add button that directs to update profile page --}}
+    @forelse ($courses as $course)
+        <h1>{{ $course->title }}</h1>
+    @empty
+        <h1>Sorry there are no courses!</h1>
+    @endforelse
 
 @endsection
