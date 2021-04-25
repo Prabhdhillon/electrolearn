@@ -37,44 +37,44 @@
 
                 <li class="nav-main-heading">Courses</li>
                 <li class="nav-main-item">
-                    <a class="nav-main-link" href="{{ '/admin/profile' }}">
+                    <a class="nav-main-link" href="/admin/profile">
                         <i class="nav-main-link-icon fa fa-location-arrow"></i>
                         <span class="nav-main-link-name">Profile</span>
                     </a>
                 </li>
                 <li class="nav-main-item">
-                    <a class="nav-main-link" href="{{ '/admin/courses' }}">
+                    <a class="nav-main-link" href="/admin/courses">
                         <i class="nav-main-link-icon fa fa-location-arrow"></i>
                         <span class="nav-main-link-name">My Courses</span>
                     </a>
                 </li>
                 <li class="nav-main-item">
-                    <a class="nav-main-link" href="{{ '/admin/courses/new' }}">
+                    <a class="nav-main-link" href="/admin/courses/new">
                         <i class="nav-main-link-icon fa fa-location-arrow"></i>
                         <span class="nav-main-link-name">Create Course</span>
                     </a>
                 </li>
                 <li class="nav-main-item">
-                    <a class="nav-main-link" href="{{ '/admin/courses/videos/new' }}">
+                    <a class="nav-main-link" href="/admin/courses/videos/new">
                         <i class="nav-main-link-icon fa fa-location-arrow"></i>
                         <span class="nav-main-link-name">Upload Videos</span>
                     </a>
                 </li>
                 <li class="nav-main-heading">Profile</li>
                 <li class="nav-main-item">
-                    <a class="nav-main-link" href="{{ '/admin/edit-profile' }}">
+                    <a class="nav-main-link" href="/admin/edit-profile">
                         <i class="nav-main-link-icon fa fa-location-arrow"></i>
                         <span class="nav-main-link-name">Edit Profile</span>
                     </a>
                 </li>
                 <li class="nav-main-item">
-                    <a class="nav-main-link" href="be_pages_dashboard.html">
+                    <a class="nav-main-link" href="">
                         <i class="nav-main-link-icon fa fa-location-arrow"></i>
                         <span class="nav-main-link-name">Change Password</span>
                     </a>
                 </li>
                 <li class="nav-main-item">
-                    <a class="nav-main-link" href="be_pages_dashboard.html">
+                    <a class="nav-main-link" href="/admin/signout">
                         <i class="nav-main-link-icon fa fa-location-arrow"></i>
                         <span class="nav-main-link-name">Signout</span>
                     </a>

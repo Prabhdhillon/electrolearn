@@ -8,6 +8,7 @@
         <div class="container">
             <h2 class="title " style="text-align:center;">Continue your Journey!</h2>
             <form class="form" method="POST">
+                @include('errors')
                 @csrf
                 <x-auth-field label="Email address" id="email" type="email" />
                 <x-auth-field label="Password" id="password" type="password" />

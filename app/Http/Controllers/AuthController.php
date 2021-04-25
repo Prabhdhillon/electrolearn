@@ -26,13 +26,13 @@ class AuthController extends Controller
             'email' => 'required|email|unique:users',
             'password' => 'required|min:8|confirmed',
             'password_confirmation' => 'required|min:8',
-            'work' => 'required|alpha',
+
         ]);
-        $user= new User($validaterequest);
-            $user->password=Hash::make($user->password);
-            $user->save();
-        
-            return redirect()->back()->with('success', 'Your Are Registered!');
+        $user = new User($validaterequest);
+        $user->password = Hash::make($user->password);
+        $user->save();
+
+        return redirect()->back()->with('success', 'Your Are Registered!');
     }
     public function handleLogin()
     {
@@ -42,18 +42,25 @@ class AuthController extends Controller
             'password' => 'required|min:8',
         ]);
 
-        $user=User::where[('email'=> $validatedRequest["email")]->first();
-        if($user==null){
-            return("Email not found");
+        $userDoesNotExist = User::where('email', $validatedRequest['email'])->count() == 0;
+        if ($userDoesNotExist) {
+            return redirect()->back()->with("error", "wrong email / password");
         }
-        $user_verified=Hash::check(request()->password,$user->password);
-        if($user_verified){
-        Auth::login($user); 
-        echo"Welcome";
-        }
-        else{
-            echo"password is incorrect";
-        }
-    }
-    }
 
+        $user = User::where('email', $validatedRequest['email'])->first();
+
+        $passwordVerified = Hash::check($validatedRequest['password'], $user->password);
+
+        if (!$passwordVerified) {
+            return redirect()->back()->with("error", "wrong email / password");
+        }
+
+        if ($user->is_instructor)
+            return redirect("/admin/login");
+        else {
+            return redirect()->back();
+        }
+        Auth::login($user);
+        return redirect('/admin/home');
+    }
+}

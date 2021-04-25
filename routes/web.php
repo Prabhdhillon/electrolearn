@@ -8,6 +8,8 @@ use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\AdminAuthController;
+use App\Http\Controllers\ProfileController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,44 +22,42 @@ use App\Http\Controllers\Admin\AdminAuthController;
 |
 */
 
-Route::get("/", function(){
+Route::get("/", function () {
   return view("welcome");
 });
 
-Route::get('/login', [AuthController::class, 'login'])->name("login");
+Route::get('/login', [AuthController::class, 'login'])->middleware("guest");
 Route::post('/login', [AuthController::class, 'handleLogin']);
 Route::get('/register', [AuthController::class, 'register'])->name("register");
 Route::post('/register', [AuthController::class, 'handleRegister']);
-Route::get('/course-overview', [Course\ViewController::class, 'index'])->name("coursovereview");
+Route::get('/course-overview', [Course\ViewController::class, 'index'])->name("home");
 Route::get('/course', [Course\VideoController::class, 'index']);
 Route::get('/instructor', [InstructorController::class, 'instructor'])->name("instructor");
 Route::get('/catalogue', [CatalogueController::class, 'catalogue'])->name("catalogue");
 
-Route::get("/admin/home", HomeController::class);
-
-Route::get("/admin/profile", [HomeController::class, 'profile']);
-Route::get("/admin/edit-profile", [HomeController::class, 'edit_profile']);
-
 Route::get("/admin/newuser", [AdminAuthController::class, 'register']);
 Route::post("/admin/newuser", [AdminAuthController::class, 'handleRegister']);
 
-Route::get("/admin/login", [AdminAuthController::class, 'login']);
+Route::get("/admin/login", [AdminAuthController::class, 'login'])->name("login");
 Route::post("/admin/login", [AdminAuthController::class, 'handleLogin']);
 
-Route::get("/admin/courses", [HomeController::class, 'all_courses']);
-Route::get("/admin/courses/new", [HomeController::class, 'upload_course']);
-Route::post("/admin/courses/new", [HomeController::class, 'store'])->name("course_create_submit");
+Route::get("/admin/signout", function () {
+  Auth::logout();
+  return redirect("admin/login");
+});
 
-Route::get("/admin/courses/videos", [HomeController::class, '']);
-Route::get("/admin/courses/videos/new", [HomeController::class, 'upload_videos']);
-Route::post("/admin/courses/videos/new", [HomeController::class, 'store_videos']);
-
-Route::get("/admin/courses/{course}", HomeController::class);
-Route::get("/admin/courses/{course}/upload", HomeController::class);
-
-Route::get("/admin/change-password", [AdminAuthController::class,'change_password']);
-Route::post("/admin/change-password", [AdminAuthController::class,'handlePassword']);
-
-Route::get("/admin/signout", HomeController::class);
-
-
+Route::middleware("auth")->group(function () {
+  Route::get("/admin/home", HomeController::class);
+  Route::get("/admin/profile", [HomeController::class, 'profile']);
+  Route::get("/admin/edit-profile", [HomeController::class, 'edit_profile']);
+  Route::get("/admin/courses", [HomeController::class, 'all_courses']);
+  Route::get("/admin/courses/new", [HomeController::class, 'upload_course']);
+  Route::post("/admin/courses/new", [HomeController::class, 'store'])->name("course_create_submit");
+  Route::get("/admin/courses/videos", [HomeController::class, '']);
+  Route::get("/admin/courses/videos/new", [HomeController::class, 'upload_videos']);
+  Route::post("/admin/courses/videos/new", [HomeController::class, 'store_videos']);
+  Route::get("/admin/courses/{course}", HomeController::class);
+  Route::get("/admin/courses/{course}/upload", HomeController::class);
+  Route::get("/admin/change-password", [AdminAuthController::class, 'change_password']);
+  Route::post("/admin/change-password", [AdminAuthController::class, 'handlePassword']);
+});

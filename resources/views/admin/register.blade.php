@@ -65,37 +65,37 @@
 
                                 <div class="col-sm-8 col-xl-6">
                                     <form action="" method="POST">
-
+                                        @include('errors')
                                         @csrf
                                         <div class="py-3">
                                             <div class="form-group">
                                                 <input type="text" class="form-control form-control-lg form-control-alt"
                                                     id="name" name="name" placeholder="Name">
-                                                @error('name')
+                                                {{-- @error('name')
                                                     <div class="text-danger">
                                                         {{ $message }}
                                                     </div>
-                                                @enderror
+                                                @enderror --}}
                                             </div>
                                             <div class="form-group">
                                                 <input type="email"
                                                     class="form-control form-control-lg form-control-alt" id="email"
                                                     name="email" placeholder="Email">
-                                                @error('email')
+                                                {{-- @error('email')
                                                     <div class="text-danger">
                                                         {{ $message }}
                                                     </div>
-                                                @enderror
+                                                @enderror --}}
                                             </div>
                                             <div class="form-group">
                                                 <input type="password"
                                                     class="form-control form-control-lg form-control-alt" id="password"
                                                     name="password" placeholder="Password">
-                                                @error('password')
+                                                {{-- @error('password')
                                                     <div class="text-danger">
                                                         {{ $message }}
                                                     </div>
-                                                @enderror
+                                                @enderror --}}
                                             </div>
                                         </div>
                                         <div class="form-group">
