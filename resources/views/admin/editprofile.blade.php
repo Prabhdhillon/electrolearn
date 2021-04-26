@@ -9,10 +9,14 @@
     <div class="content">
         <form action="" method="POST" enctype="multipart/form-data">
             @csrf
-            <x-admin.input label="Enter Name" id="name" type="text" placeholder="Enter Name" />
-            <x-admin.input label="Bio" id="description" type="textarea" placeholder="Enter About Yourself" />
-            <x-admin.input label="Specialisations" id="specs" type="text" placeholder="Enter Your Specialisations" />
-            <x-admin.input label="Upload Profile Picture" id="profile" type="file" />
+            <div class="form-group">
+                <label for="Name"></label>
+                <input type="text" id="name" name="name" value="{{ $user->name }}">
+            </div>
+            {{-- <x-admin.input label="Enter Name" id="name" type="text" placeholder="Enter Name" /> --}}
+            {{-- <x-admin.input label="Bio" id="description" type="textarea" placeholder="Enter About Yourself" />
+                <x-admin.input label="Specialisations" id="specs" type="text" placeholder="Enter Your Specialisations" />
+                <x-admin.input label="Upload Profile Picture" id="profile" type="file" /> --}}
 
 
             <div class="form-group-button">

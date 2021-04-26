@@ -20,7 +20,7 @@
                     E<span class="opacity-75">n</span>
                 </span>
                 <span class="smini-hidden">
-                    Electr<span class="opacity-75">learn</span>
+                    Electro<span class="opacity-75">learn</span>
                 </span>
             </a>
             <!-- END Logo -->

@@ -8,17 +8,22 @@ use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
+    public function user()
+    {
+        return User::where("id", auth()->user()->id)->first();
+    }
     public function profile()
     {
-        return view("admin.profile");
+        $user = $this->user();
+        return view("admin.profile")->with("user", $user);
     }
     public function edit_profile()
     {
-        return view("admin.editprofile");
+        $user = $this->user();
+        return view("admin.editprofile")->with("user", $user);
     }
     public function update_profile()
     {
-
-        return redirect()->back();
+        $users = User::where("id", auth()->user()->id)->first();
     }
 }

@@ -13,6 +13,12 @@ class Course extends Model
 
     protected $guarded = [];
 
+
+    public function getRouteKeyName()
+    {
+        return "slug";
+    }
+
     function videos()
     {
         return $this->hasMany(Video::class, "course_id");
