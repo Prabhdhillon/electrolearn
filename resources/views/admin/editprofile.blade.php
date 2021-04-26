@@ -10,9 +10,9 @@
         <form action="" method="POST" enctype="multipart/form-data">
             @csrf
             <x-admin.input label="Enter Name" id="name" type="text" placeholder="Enter Name" />
-            <x-admin.input label="Description" id="description" type="textarea" placeholder="Enter About Yourself" />
+            <x-admin.input label="Bio" id="description" type="textarea" placeholder="Enter About Yourself" />
             <x-admin.input label="Specialisations" id="specs" type="text" placeholder="Enter Your Specialisations" />
-            <x-admin.input label="Upload Profile pIcture" id="profile" type="file" />
+            <x-admin.input label="Upload Profile Picture" id="profile" type="file" />
 
 
             <div class="form-group-button">

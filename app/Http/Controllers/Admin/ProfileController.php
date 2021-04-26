@@ -10,8 +10,7 @@ class ProfileController extends Controller
 {
     public function profile()
     {
-        $users = User::get();
-        return view("admin.profile")->with("users", $users);
+        return view("admin.profile");
     }
     public function edit_profile()
     {
@@ -19,9 +18,7 @@ class ProfileController extends Controller
     }
     public function update_profile()
     {
-        $users = User::first();
-        $users->name = request()->input('name');
-        $users->save();
-        return redirect()->back()->with("success", "Values Updated!");
+
+        return redirect()->back();
     }
 }

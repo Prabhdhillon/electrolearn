@@ -11,13 +11,13 @@
 
                 </div>
                 <br>
-                <h3 class="font-w600 pr-3">Name: <h4 class="font-w300"> {{ $user->name }}</h4>
+                <h3 class="font-w600 pr-3">Name: <div class="font-w300"></div>
                 </h3>
                 <br><br>
-                <h3 class="font-w600">Bio:<div class="font-w300"> {{ $user->description }}</div>
+                <h3 class="font-w600">Bio:<div class="font-w300"></div>
                 </h3>
                 <br><br>
-                <h3 class=" font-w600">Specialisations:<h4 class="font-w300"> {{ $user->specs }}</h4>
+                <h3 class="font-w600">Specialisations:<div class="font-w300"></div>
                 </h3>
                 <br><br>
             @endforeach
