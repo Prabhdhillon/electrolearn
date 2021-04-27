@@ -10,8 +10,22 @@
         <form action="" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
-                <label for="Name"></label>
-                <input type="text" id="name" name="name" value="{{ $user->name }}">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" class="form-control" value="{{ $user->name }}" />
+            </div>
+            <div class="form-group">
+                <label for="description">Bio</label>
+                <textarea type="text" name="description" id="description"
+                    class="form-control">{{ $user->description }}</textarea>
+
+            </div>
+            <div class="form-group">
+                <label for="specs">Specifications</label>
+                <input type="text" name="specs" id="specs" class="form-control" value="{{ $user->specs }}" />
+            </div>
+            <div class="form-group">
+                <label for="profile">Profile</label>
+                <input type="file" name="profile" id="profile" class="form-control" value="{{ $user->profile }}" />
             </div>
             {{-- <x-admin.input label="Enter Name" id="name" type="text" placeholder="Enter Name" /> --}}
             {{-- <x-admin.input label="Bio" id="description" type="textarea" placeholder="Enter About Yourself" />

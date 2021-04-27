@@ -24,6 +24,13 @@ class ProfileController extends Controller
     }
     public function update_profile()
     {
-        $users = User::where("id", auth()->user()->id)->first();
+        $user = User::where("id", auth()->user()->id)->first();
+        $user->name = request()->input('name');
+        $user->description = request()->input('description');
+        $user->specs = request()->input('specs');
+        if (request()->hasFile('profile')) {
+            $user->profile = request()->file('profile')->store('uploads');
+        }
+        $user->save();
     }
 }
