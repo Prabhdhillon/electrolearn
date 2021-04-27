@@ -65,8 +65,8 @@ Route::middleware("auth")->prefix("/admin")->group(function () {
   // Route::post("/courses/{course}/videos/new", [CourseController::class, 'store_videos']);
   // Route::get("/courses/{course}", CourseController::class);
   // Route::get("/courses/{course}/upload", CourseController::class);
-  Route::get("/change-password", [AdminAuthController::class, 'change_password']);
-  Route::post("/change-password", [AdminAuthController::class, 'handlePassword']);
+  Route::get("/resetpassword", [AdminAuthController::class, 'change_password']);
+  Route::post("/resetpassword", [AdminAuthController::class, 'handlePassword']);
 });
 
 Route::get("/admin/course/{course}/videos", [CourseVideoController::class, 'index']);

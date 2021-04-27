@@ -13,7 +13,7 @@ class CourseController extends Controller
 {
     public function all_courses()
     {
-        $courses = Course::get();
+        $courses = Course::where("author_id", auth()->user()->id)->get();
         return view("admin.allcourses")->with("courses", $courses);
     }
 
@@ -35,7 +35,9 @@ class CourseController extends Controller
         $course->thumbnail = request()->file("thumbnail")->store("uploads");
         $course->slug = Str::kebab($course->title);
         $course->author_id = Auth::user()->id;
+
         $course->save();
+        return redirect()->back()->with("success", "Upload Successful!");
 
         // return redirect()->back();
 
