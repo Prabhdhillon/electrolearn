@@ -30,7 +30,7 @@
                 <div class="col">
                     <h6 class="video-title">Streaming for Beginners</h6>
                     <h6 class="video-instructor">By Micheal G.</h6>
-                    <h6 class="video-time">1hr20min</h6>
+                    <div class="video-time">1hr20min</div>
                     <p class="video-discription">Lorem ipsum dolor sit amet,
                         consectetur adipiscing elit. Integer vulputate sed sapien sed sollicitudin.
                         non aliquam arcu finibus vel.</p>
@@ -44,7 +44,7 @@
                 <div class="col">
                     <h6 class="video-title">Streaming for Beginners</h6>
                     <h6 class="video-instructor">By Micheal G.</h6>
-                    <h6 class="video-time">1hr20min</h6>
+                    <div class="video-time">1hr20min</div>
                     <p class="video-discription">Lorem ipsum dolor sit amet,
                         consectetur adipiscing elit. Integer vulputate sed sapien sed sollicitudin.
                         non aliquam arcu finibus vel.</p>

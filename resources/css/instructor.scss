@@ -32,8 +32,10 @@
 .video-time {
     font-size: 12px;
     font-weight: 400;
-    display: inline-block;
+    display: inline;
     float: right;
+  
+    
 }
 .video-discription {
     font-size: 12px;
@@ -43,6 +45,9 @@
 .video-btn {
     width: 86px;
     height: 20px;
+    justify-content: center;
+    display: inline-flex;
+    align-items: center; 
     border-radius: 100px;
     color: #ffffff;
     background-color: #773dd6;
