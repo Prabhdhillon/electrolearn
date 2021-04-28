@@ -13,13 +13,16 @@
                     <a href="/admin/course/{{ $course->slug }}/videos">
                         <h3>{{ $course->title }}</h3>
                     </a>
-                    <p>By {{ auth()->user()->name }}</p>
-                    <p>{{ $course->description }}</p>
+                    <h5>By {{ auth()->user()->name }}</h5>
+                    <p style="word-break: break-all;font-size:18px;">{{ $course->description }}</p>
                 </div>
 
             </div><br>
         @empty
-            <h1>Sorry there are no courses!</h1>
+            <div class="container">
+                <h1>Sorry there are no courses!</h1>
+            </div>
+
         @endforelse
 
 
