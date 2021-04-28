@@ -66,10 +66,7 @@ class AdminAuthController extends Controller
             'new_password' => 'required|min:8|confirmed',
             'new_password_confirmation' => 'required|min:8'
         ]);
-
         $user = User::where("id", auth()->user()->id)->first();
-
-
         $passwordVerified = Hash::check(request("password"), $user->password);
         if ($passwordVerified) {
             $user->password = $validatedRequest["new_password"];
