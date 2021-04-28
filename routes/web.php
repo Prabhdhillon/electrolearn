@@ -58,6 +58,7 @@ Route::middleware("auth")->prefix("/admin")->group(function () {
   Route::get("/edit-profile", [ProfileController::class, 'edit_profile']);
   Route::post("/edit-profile", [ProfileController::class, 'update_profile']);
   Route::get("/courses", [CourseController::class, 'all_courses']);
+ 
   Route::get("/courses/new", [CourseController::class, 'upload_course']);
   Route::post("/courses/new", [CourseController::class, 'store'])->name("course_create_submit");
   // Route::get("/courses/{course}/videos", [CourseController::class, '']);
