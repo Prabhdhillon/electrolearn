@@ -19,6 +19,11 @@
                 <button type="submit" class="btn btn-primary mt-3">Submit</button>
 
             </div>
+            @if (session()->has('success'))
+                <div class="alert alert-success mt-3">
+                    {{ session()->get('success') }}
+                </div>
+            @endif
         </form>
     </div>
 

@@ -14,20 +14,15 @@
                     <i class="fa fa-fw fa-angle-down ml-1 d-none d-sm-inline-block"></i>
                 </button>
                 <div class="dropdown-menu dropdown-menu-right p-0" aria-labelledby="page-header-user-dropdown">
-                    <div class="bg-primary rounded-top font-w600 text-white text-center p-3">
-                        User Options
-                    </div>
+
                     <div class="p-2">
                         <!-- Toggle Side Overlay -->
                         <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
-                        <a class="dropdown-item" href="javascript:void(0)" data-toggle="layout"
-                            data-action="side_overlay_toggle">
-                            <i class="far fa-fw fa-building mr-1"></i> Change Password
-                        </a>
+
                         <!-- END Side Overlay -->
 
                         <div role="separator" class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="op_auth_signin.html">
+                        <a class="dropdown-item" href="/admin/signout">
                             <i class="far fa-fw fa-arrow-alt-circle-left mr-1"></i> Sign Out
                         </a>
                     </div>

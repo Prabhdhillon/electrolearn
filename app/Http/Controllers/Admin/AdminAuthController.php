@@ -66,7 +66,17 @@ class AdminAuthController extends Controller
             'new_password' => 'required|min:8|confirmed',
             'new_password_confirmation' => 'required|min:8'
         ]);
-        $admin = new User($validatedRequest);
+        $user = User::where("id", auth()->user()->id)->first();
+        $passwordVerified = Hash::check(request("password"), $user->password);
+        if ($passwordVerified) {
+            $user->password = $validatedRequest["new_password"];
+            $user->password = Hash::make($user->password);
+            $user->save();
+            return redirect()->back()->with("success", "Password Changed Successfully!");
+        } else {
+            return redirect()->back()->with("error", "Old password did not match");
+        }
+
         // $admin->new_password=Hash::make($admin->password);
 
 

@@ -32,5 +32,6 @@ class ProfileController extends Controller
             $user->profile = request()->file('profile')->store('uploads');
         }
         $user->save();
+        return redirect()->back()->with("success", "Update Successful!");
     }
 }
