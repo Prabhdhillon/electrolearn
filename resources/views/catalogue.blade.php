@@ -53,8 +53,10 @@
 
         <div class="buttons container">
 
-            <p class="buttons-para ">Showing 10 courses from 132 courses</p>
-            <button class="button-prev btn me-4">Previous</button>
-            <button class="button-next btn">Next</button>
+            <p class="buttons-para">Showing 10 courses from 132 courses</p>
+            <div class="button-group">
+                <button class="button button-secondary">Previous</button>
+                <button class="button button-active">Next</button>
+            </div>
         </div>
     @endsection

@@ -10,8 +10,8 @@
 
     <div class="container mt-5">
         @forelse ($courses as $course)
-            <div class="col-md-4"><img src="/{{ $course->thumbnail }}" class="img-screen" alt=""></div>
-            <section class="row">
+            <section class="row mb-5">
+                <div class="col-md-4"><img src="/{{ $course->thumbnail }}" class="img-screen" alt=""></div>
                 <div class="col-md-8">
                     <h3>{{ $course->title }}</h3>
 
