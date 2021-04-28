@@ -1,13 +1,28 @@
-@extends('layout.admin')
-
+@extends("layout.admin")
+@section('title')
+    Upload Videos
+@endsection
 @section('content')
-    <div class="mb-3">
-        <label for="name"></label>
-        <input id="name" name="name" type="text" class="form-control">
-    </div>
-    <div class="mb-3">
-        <label for="description"></label>
-        <input id="description" name="description" type="text" class="form-control">
+
+
+    <!-- Page Content -->
+    <div class="content">
+        <form action="" method="POST" enctype="multipart/form-data">
+            @csrf
+            <x-admin.input label="Enter the Title" id="title" type="text" placeholder="Enter the title" />
+            <x-admin.input label="Description" id="description" type="textarea" placeholder="Enter video description" />
+            <x-admin.input label="Upload Video" id="file" type="file" />
+            <x-admin.input label="Upload Thumbnail" id="thumbnail" type="file" />
+            <div class="form-group-button">
+                <button type="submit" class="btn btn-primary mt-3">Submit</button>
+            </div>
+            @if (session()->has('success'))
+                <div class="alert alert-success mt-3">
+                    {{ session()->get('success') }}
+                </div>
+            @endif
+        </form>
     </div>
 
+    <!-- END Page Content -->
 @endsection
