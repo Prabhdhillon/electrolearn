@@ -46,22 +46,22 @@ class CourseController extends Controller
     {
         return view("admin.videos");
     }
-    public function store_videos()
-    {
-        $validatedRequest = request()->validate([
-            'title' => 'required|min:3|max:120',
-            'description' => 'required',
-            'file' => 'required|file|',
-            'thumbnail' => 'required|file|max:2000',
-        ]);
+    // public function store_videos()
+    // {
+    //     $validatedRequest = request()->validate([
+    //         'title' => 'required|min:3|max:120',
+    //         'description' => 'required',
+    //         'file' => 'required|file|',
+    //         'thumbnail' => 'required|file|max:2000',
+    //     ]);
 
-        $video = new Video($validatedRequest);
+    //     $video = new Video($validatedRequest);
 
-        $video->file = request()->file("file")->store("uploads");
-        $video->thumbnail = request()->file("thumbnail")->store("uploads");
-        $video->slug = Str::kebab($video->title);
-        $video->author_id = Auth::user()->id;
-        $video->course_id;
-        $video->save();
-    }
+    //     $video->file = request()->file("file")->store("uploads");
+    //     $video->thumbnail = request()->file("thumbnail")->store("uploads");
+    //     $video->slug = Str::kebab($video->title);
+    //     $video->author_id = Auth::user()->id;
+    //     $video->course_id=$course;
+    //     $video->save();
+    // }
 }

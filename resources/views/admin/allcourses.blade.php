@@ -1,31 +1,33 @@
 @extends('layout.admin')
+
 @section('title')
     Courses
 @endsection
-@section('content')
 
+
+
+@section('content')
 
     <div class="container mt-5">
         @forelse ($courses as $course)
-            <div class="container" style="display: flex">
-                <div><img src="/{{ $course->thumbnail }}" style="width:230px;height:200px;" alt=""></div>
-                <div style="margin-left:50px;">
-                    <a href="/admin/course/{{ $course->slug }}/videos">
-                        <h3>{{ $course->title }}</h3>
-                    </a>
+            <section class="row mb-5">
+                <div class="col-md-4"><img src="/{{ $course->thumbnail }}" class="img-screen" alt=""></div>
+                <div class="col-md-8">
+                    <h3>{{ $course->title }}</h3>
+
                     <h5>By {{ auth()->user()->name }}</h5>
                     <p style="word-break: break-all;font-size:18px;">{{ $course->description }}</p>
+                    <a href="/admin/course/{{ $course->slug }}/videos" class="btn btn-primary">Videos</a>
+                    <a href="/admin/course/{{ $course->slug }}/videos/edit" class="btn btn-warning">Edit</a>
+                    <a href="/admin/course/{{ $course->slug }}/videos" class="btn btn-danger">Delete</a>
                 </div>
-
-            </div><br>
+            </section>
         @empty
-            <div class="container">
-                <h1>Sorry there are no courses!</h1>
-            </div>
-
+            <h1>Sorry there are no courses!</h1>
         @endforelse
+    </div>
 
 
 
 
-    @endsection
+@endsection

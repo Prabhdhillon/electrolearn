@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Course;
+use App\Models\Video;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Auth;
 
 class CourseVideoController extends Controller
 {
@@ -36,7 +39,21 @@ class CourseVideoController extends Controller
      */
     public function store(Course $course)
     {
-        //
+        $validatedRequest = request()->validate([
+            'title' => 'required|min:3|max:120',
+            'description' => 'required',
+            'file' => 'required|file|',
+            'thumbnail' => 'required|file|max:2000',
+        ]);
+
+        $video = new Video($validatedRequest);
+        $video->file = request()->file("file")->store("uploads");
+        $video->thumbnail = request()->file("thumbnail")->store("uploads");
+        $video->slug = Str::kebab($video->title);
+        $video->author_id = Auth::user()->id;
+        $video->course_id = $course->id;
+        $video->save();
+        return redirect()->back()->with("success", "Video Uploaded!");
     }
 
     /**

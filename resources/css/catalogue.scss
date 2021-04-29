@@ -24,3 +24,26 @@
     border-radius: 100px;
     outline:none;
 }
+.button-group{
+    display: flex;
+    justify-content: center;
+    
+    .button:first-child{
+        margin-right: 20px;
+    }
+}
+.button{
+    height: 30px;
+    font-size: 12px;
+    border: 0;
+    padding: 5px 30px ;
+    border-radius: 100px;
+}
+.button-secondary {
+    background-color: #30313a;
+    color: #4a4c5a;
+}
+.button-active {
+    background-color: #224eff;
+    color: #fff;
+}
