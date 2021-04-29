@@ -39,13 +39,16 @@ class AdminAuthController extends Controller
             "email" => 'required',
             "password" => 'required|min:8'
         ]);
+
         $userDoesNotExist = User::where('email', $validatedRequest["email"])->count() == 0;
         if ($userDoesNotExist) {
             return redirect()->back()->with("error", "Wrong Email or Password");
         };
 
         $admin = User::where('email', $validatedRequest["email"])->first();
-
+        if (!$admin->is_instructor) {
+            return redirect("/register");
+        }
         $passwordVerified = Hash::check($validatedRequest["password"], $admin->password);
         if (!$passwordVerified) {
             return redirect()->back()->with("error", "Wrong Email or Password");

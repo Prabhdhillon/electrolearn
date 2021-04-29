@@ -28,7 +28,7 @@
 
             @forelse($courses as $course)
                 <div class="row video-row mx-auto">
-                    <div class="col"><img src="{{ asset('images/video.png') }}" class="video-img"></div>
+                    <div class="col"><img src="/{{ $course->thumbnail }}" class="video-img"></div>
                     <div class="col">
                         <h6 class="video-title">{{ $course->title }}</h6>
                         <h6 class="video-instructor">By Micheal G.</h6>
