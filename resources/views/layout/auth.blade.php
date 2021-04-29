@@ -56,7 +56,7 @@
                                         <a class="nav-link me-5 " href="#">Disciplines</a>
                                     </li>
                                     <li class="nav-item ">
-                                        <a class="nav-link me-5" href="#">Certificates</a>
+                                        <a class="nav-link me-5" href="/catalogue">Courses</a>
                                     </li>
                                     <li class="nav-item ml-3">
                                         <a class="nav-link" href="#"><button type="button"
