@@ -55,4 +55,9 @@ class CourseController extends Controller
         $course->save();
         return redirect()->back()->with("success", "Course Updated Successful!");
     }
+    public function delete(Course $course)
+    {
+        $course = Course::where("id", $course->id)->delete();
+        return redirect()->back();
+    }
 }

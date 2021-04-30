@@ -23,12 +23,7 @@
                                             {{ $video->title }}
                                         </a>
                                         <p class="text-muted mb-0">
-                                            Ligula hendrerit nibh, ac cursus nibh sapien in purus. Mauris tincidunt
-                                            tincidunt
-                                            turpis in porta. Integer fermentum tincidunt auctor. Vestibulum ullamcorper,
-                                            odio
-                                            sed rhoncus imperdiet, enim elit sollicitudin orci, eget dictum leo mi nec
-                                            lectus.
+                                            {{ $video->description }}
                                         </p>
                                     </div>
                                 </td>
