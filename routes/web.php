@@ -32,7 +32,7 @@ Route::get('/login', [AuthController::class, 'login'])->middleware("guest")->nam
 Route::post('/login', [AuthController::class, 'handleLogin']);
 Route::get('/register', [AuthController::class, 'register'])->middleware("guest")->name("register");
 Route::post('/register', [AuthController::class, 'handleRegister']);
-Route::get('/course-overview', [Course\ViewController::class, 'index'])->middleware("auth");
+Route::get('/course-overview', [Course\ViewController::class, 'index'])->middleware("auth")->name("home");
 Route::get('/course', [Course\VideoController::class, 'index'])->middleware("auth");
 Route::get('/instructor', [InstructorController::class, 'instructor'])->middleware("auth")->name("instructor");
 Route::get('/catalogue', [CatalogueController::class, 'catalogue'])->middleware("auth")->name("catalogue");
@@ -54,7 +54,7 @@ Route::get("/signout", function () {
 });
 
 Route::middleware("auth")->prefix("/admin")->group(function () {
-  Route::get("/home", HomeController::class)->name("home");
+  Route::get("/home", HomeController::class);
   Route::get("/profile", [ProfileController::class, 'profile']);
   Route::get("/edit-profile", [ProfileController::class, 'edit_profile']);
   Route::post("/edit-profile", [ProfileController::class, 'update_profile']);
