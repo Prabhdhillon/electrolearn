@@ -53,11 +53,11 @@ class CourseController extends Controller
             $course->thumbnail = request()->file('thumbnail')->store('uploads');
         }
         $course->save();
-        return redirect()->back()->with("success", "Course Updated Successful!");
+        return redirect()->back()->with("success", "Course Updated Successfully!");
     }
     public function delete(Course $course)
     {
         $course = Course::where("id", $course->id)->delete();
-        return redirect()->back();
+        return redirect()->back()->with("delete", "Course Deleted!");
     }
 }

@@ -29,11 +29,8 @@
                 <input type="file" name="thumbnail" id="thumbnail" class="form-control"
                     value="{{ $course->thumbnail }}" />
             </div>
-
-
             <div class="form-group-button">
                 <button type="submit" class="btn btn-primary mt-3">Submit</button>
-
             </div>
             @if (session()->has('success'))
                 <div class="alert alert-success mt-3">

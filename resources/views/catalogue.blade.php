@@ -32,7 +32,6 @@
 
 
                     <div class="col"><img src="/{{ $course->thumbnail }}" class="video-img img-fluid"></div>
-
                     <div class="col">
                         <h6 class="video-title">{{ $course->title }}</h6>
                         <h6 class="video-instructor">By Micheal G.</h6>
@@ -44,7 +43,7 @@
                                 ...
                             @endif
                         </p>
-                        <button class="video-btn btn">START</button>
+                        <a href="/catalogue/{{ $course->slug }}"><button class="video-btn btn">START</button></a>
                     </div>
                 </div>
             @empty

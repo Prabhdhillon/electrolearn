@@ -31,7 +31,11 @@
                         </tbody>
                     </table>
                 </div>
+
             </div>
+            <a href="/admin/courses/{{ $course->slug }}/videos/{{ $video->slug }}/edit" class="btn btn-warning">Edit</a>
+            <a href="/admin/courses/{{ $course->slug }}/videos/{{ $video->slug }}/delete"
+                class="btn btn-danger">Delete</a>
         @empty
 
         @endforelse
