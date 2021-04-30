@@ -20,34 +20,28 @@
 
     <!--VIDEOS start-->
     <div class="video container">
+
+    @forelse($courses as $course)
         <div class="row video-row mx-auto">
 
-            <div class="col"><img src="{{ asset('images/video.png') }}" class="video-img"></div>
+            <div class="col"><img src="/{{ $course->thumbnail }}" class="video-img"></div>
             <div class="col">
-                <h6 class="video-title">Streaming for Bignners</h6>
+                <h6 class="video-title">{{ $course->title }}</h6>
                 <h6 class="video-instructor">By Micheal G.</h6>
-                <h6 class="video-time">1hr20min</h6>
-                <p class="video-discription">Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit. Integer vulputate sed sapien sed sollicitudin.
-                    non aliquam arcu finibus vel.</p>
+                
+                <p class="video-discription"> @php $length = 100; @endphp
+                            {{ Str::substr($course->description, 0, $length) }}
+                            @if (Str::length($course->description) > $length)
+                                ...
+                            @endif</p>
                 <button class="video-btn btn">BIGNNER</button>
 
             </div>
         </div>
-        <div class="row video-row mx-auto">
-
-            <div class="col"><img src="{{ asset('images/video.png') }}" class="video-img"></div>
-            <div class="col">
-                <h6 class="video-title">Streaming for Bignners</h6>
-                <h6 class="video-instructor">By Micheal G.</h6>
-                <h6 class="video-time">1hr20min</h6>
-                <p class="video-discription">Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit. Integer vulputate sed sapien sed sollicitudin.
-                    non aliquam arcu finibus vel.</p>
-                <button class="video-btn btn">BIGNNER</button>
-
-            </div>
-        </div>
+      
+        @empty
+                No courses to show!
+            @endforelse
     </div>
     <!--VIDEOS ends-->
 
