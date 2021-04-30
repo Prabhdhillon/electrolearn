@@ -15,4 +15,8 @@ class Video extends Model
     {
         return $this->belongsTo(Course::class, "course_id");
     }
+    public function getRouteKeyName()
+    {
+        return "slug";
+    }
 }

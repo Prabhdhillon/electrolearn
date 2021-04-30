@@ -75,9 +75,10 @@ class CourseVideoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Course $course, Video $video)
     {
-        return view("admin.video.edit");
+
+        return view("admin.video.edit", compact('course', 'video'));
     }
 
     /**

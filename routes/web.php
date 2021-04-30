@@ -36,6 +36,7 @@ Route::get('/course-overview', [Course\ViewController::class, 'index'])->middlew
 Route::get('/course', [Course\VideoController::class, 'index'])->middleware("auth");
 Route::get('/instructor', [InstructorController::class, 'instructor'])->middleware("auth")->name("instructor");
 Route::get('/catalogue', [CatalogueController::class, 'catalogue'])->middleware("auth")->name("catalogue");
+Route::get('/catalogue/{course}', [CatalogueController::class, 'showCourse'])->middleware("auth");
 
 Route::get("/admin/newuser", [AdminAuthController::class, 'register']);
 Route::post("/admin/newuser", [AdminAuthController::class, 'handleRegister']);
@@ -62,15 +63,11 @@ Route::middleware("auth")->prefix("/admin")->group(function () {
   Route::get("/courses/new", [CourseController::class, 'create']);
   Route::post("/courses/new", [CourseController::class, 'store'])->name("course_create_submit");
   Route::get("/courses/{course}/edit", [CourseController::class, 'edit']);
+  Route::get("/courses/{course}/videos/{video}/edit", [CourseVideoController::class, 'edit']);
   Route::post("/courses/{course}/edit", [CourseController::class, 'update']);
   Route::get("/courses/{course}/delete", [CourseController::class, 'delete']);
-  // Route::get("/courses/{course}/videos", [CourseController::class, '']);
-  // Route::get("/courses/{course}/videos/new", [CourseController::class, 'upload_videos']);
-  // Route::post("/courses/{course}/videos/new", [CourseController::class, 'store_videos']);
-  // Route::get("/courses/{course}", CourseController::class);
-  // Route::get("/courses/{course}/upload", CourseController::class);
-  Route::get("/courses/{course}/videos", [CourseVideoController::class, 'index']);
 
+  Route::get("/courses/{course}/videos", [CourseVideoController::class, 'index']);
   Route::get("/courses/{course}/videos/new", [CourseVideoController::class, 'create']);
   Route::post("/courses/{course}/videos/new", [CourseVideoController::class, 'store']);
   Route::get("/resetpassword", [AdminAuthController::class, 'change_password']);
