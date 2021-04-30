@@ -38,6 +38,8 @@ Route::get('/instructor', [InstructorController::class, 'instructor'])->middlewa
 Route::get('/catalogue', [CatalogueController::class, 'catalogue'])->middleware("auth")->name("catalogue");
 Route::get('/catalogue/{course}', [CatalogueController::class, 'showCourse'])->middleware("auth");
 
+Route::get("/home", fn () => redirect("/"));
+
 Route::get("/admin/newuser", [AdminAuthController::class, 'register']);
 Route::post("/admin/newuser", [AdminAuthController::class, 'handleRegister']);
 
