@@ -954,3 +954,7 @@ body {
   top: 0;
   left: 0;
 }
+.instructor-discription {
+  font-size: 14px;
+  text-align: justify;
+}
