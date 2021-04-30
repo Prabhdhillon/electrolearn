@@ -54,7 +54,7 @@ Route::get("/signout", function () {
 });
 
 Route::middleware("auth")->prefix("/admin")->group(function () {
-  Route::get("/home", HomeController::class);
+  Route::get("/home", HomeController::class)->name("home");
   Route::get("/profile", [ProfileController::class, 'profile']);
   Route::get("/edit-profile", [ProfileController::class, 'edit_profile']);
   Route::post("/edit-profile", [ProfileController::class, 'update_profile']);
