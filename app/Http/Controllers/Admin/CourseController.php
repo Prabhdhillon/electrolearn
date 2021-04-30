@@ -11,15 +11,15 @@ use Illuminate\Support\Facades\Auth;
 
 class CourseController extends Controller
 {
-    public function all_courses()
+    public function index()
     {
         $courses = Course::where("author_id", auth()->user()->id)->get();
-        return view("admin.allcourses")->with("courses", $courses);
+        return view("admin.course.index")->with("courses", $courses);
     }
 
-    public function upload_course()
+    public function create()
     {
-        return view("admin.courses");
+        return view("admin.course.create");
     }
     public function store()
     {
@@ -38,30 +38,21 @@ class CourseController extends Controller
 
         $course->save();
         return redirect()->back()->with("success", "Upload Successful!");
-
-        // return redirect()->back();
-
     }
-    public function upload_videos()
+    public function edit(Course $course)
     {
-        return view("admin.videos");
+        return view("admin.course.edit", compact('course'));
     }
-    // public function store_videos()
-    // {
-    //     $validatedRequest = request()->validate([
-    //         'title' => 'required|min:3|max:120',
-    //         'description' => 'required',
-    //         'file' => 'required|file|',
-    //         'thumbnail' => 'required|file|max:2000',
-    //     ]);
-
-    //     $video = new Video($validatedRequest);
-
-    //     $video->file = request()->file("file")->store("uploads");
-    //     $video->thumbnail = request()->file("thumbnail")->store("uploads");
-    //     $video->slug = Str::kebab($video->title);
-    //     $video->author_id = Auth::user()->id;
-    //     $video->course_id=$course;
-    //     $video->save();
-    // }
+    public function update(Course $course)
+    {
+        $course = Course::where("id", $course->id)->first();
+        $course->title = request()->input('title');
+        $course->description = request()->input('description');
+        $course->tools = request()->input('tools');
+        if (request()->hasFile('thumbnail')) {
+            $course->thumbnail = request()->file('thumbnail')->store('uploads');
+        }
+        $course->save();
+        return redirect()->back()->with("success", "Course Updated Successful!");
+    }
 }

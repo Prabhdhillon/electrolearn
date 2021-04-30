@@ -57,18 +57,21 @@ Route::middleware("auth")->prefix("/admin")->group(function () {
   Route::get("/profile", [ProfileController::class, 'profile']);
   Route::get("/edit-profile", [ProfileController::class, 'edit_profile']);
   Route::post("/edit-profile", [ProfileController::class, 'update_profile']);
-  Route::get("/courses", [CourseController::class, 'all_courses']);
 
-  Route::get("/courses/new", [CourseController::class, 'upload_course']);
+  Route::get("/courses", [CourseController::class, 'index']);
+  Route::get("/courses/new", [CourseController::class, 'create']);
   Route::post("/courses/new", [CourseController::class, 'store'])->name("course_create_submit");
+  Route::get("/courses/{course}/edit", [CourseController::class, 'edit']);
+  Route::post("/courses/{course}/edit", [CourseController::class, 'update']);
   // Route::get("/courses/{course}/videos", [CourseController::class, '']);
   // Route::get("/courses/{course}/videos/new", [CourseController::class, 'upload_videos']);
   // Route::post("/courses/{course}/videos/new", [CourseController::class, 'store_videos']);
   // Route::get("/courses/{course}", CourseController::class);
   // Route::get("/courses/{course}/upload", CourseController::class);
-  Route::get("/course/{course}/videos", [CourseVideoController::class, 'index']);
-  Route::get("/course/{course}/videos/new", [CourseVideoController::class, 'create']);
-  Route::post("/course/{course}/videos/new", [CourseVideoController::class, 'store']);
+  Route::get("/courses/{course}/videos", [CourseVideoController::class, 'index']);
+
+  Route::get("/courses/{course}/videos/new", [CourseVideoController::class, 'create']);
+  Route::post("/courses/{course}/videos/new", [CourseVideoController::class, 'store']);
   Route::get("/resetpassword", [AdminAuthController::class, 'change_password']);
   Route::post("/resetpassword", [AdminAuthController::class, 'handlePassword']);
 });

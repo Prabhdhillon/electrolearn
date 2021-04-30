@@ -1,7 +1,37 @@
-VIDEO 1 Edit->view('edit')->update(1) Delete->destroy(1)
-VIDEO 2 Edit->view('edit')->update(2) Delete->destroy(2)
-VIDEO 3 Edit->view('edit')->update(3) Delete->destroy(3)
-VIDEO 4 Edit->view('edit')->update(4) Delete->destroy(4)
-VIDEO 5 Edit->view('edit')->update(5) Delete->destroy(5)
-VIDEO 6 Edit->view('edit')->update(6) Delete->destroy(6)
-VIDEO 7 Edit->view('edit')->update(7) Delete->destroy(7)
+@extends('layout.admin')
+
+@section('title')
+    Courses
+@endsection
+
+
+
+@section('content')
+
+    <div class="container mt-5">
+        @forelse ($courses as $course)
+            <section class="row mb-5">
+                <div class="col-md-5">
+                    <a class="block block-rounded block-transparent d-md-flex align-items-md-stretch bg-image"
+                        href="/admin/courses/{{ $course->slug }}/videos" data-toggle="click-ripple"><img
+                            src="/{{ $course->thumbnail }}" class="img-fluid" alt="">
+                        <div class="block-content block-content-full bg-black-50">
+                            <div class="py-6">
+                                <h3 class="font-w700 text-white mb-1">{{ $course->title }}</h3>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/admin/courses/{{ $course->slug }}/edit" class="btn btn-warning">Edit</a>
+                    <a href="/admin/courses/{{ $course->slug }}/videos" class="btn btn-danger">Delete</a>
+                </div>
+            </section>
+        @empty
+            <h1>Sorry there are no courses!</h1>
+        @endforelse
+    </div>
+
+
+
+
+
+@endsection
