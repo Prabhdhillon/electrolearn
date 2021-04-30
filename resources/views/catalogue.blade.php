@@ -28,11 +28,15 @@
 
             @forelse($courses as $course)
                 <div class="row video-row mx-auto">
-                    <div class="col"><img src="/{{$course->thumbnail}}" class="video-img img-fluid"></div>
+
+
+
+                    <div class="col"><img src="/{{ $course->thumbnail }}" class="video-img img-fluid"></div>
+
                     <div class="col">
                         <h6 class="video-title">{{ $course->title }}</h6>
                         <h6 class="video-instructor">By Micheal G.</h6>
-                        
+
                         <p class="video-discription">
                             @php $length = 100; @endphp
                             {{ Str::substr($course->description, 0, $length) }}

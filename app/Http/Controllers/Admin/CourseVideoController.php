@@ -17,8 +17,9 @@ class CourseVideoController extends Controller
      */
     public function index(Course $course)
     {
-
-        return view("admin.video.index", compact("course"));
+        // $videos = Video::where("course_id", $course->id)->get();
+        $videos = $course->videos()->get();
+        return view("admin.video.index", compact('course', 'videos'));
     }
 
     /**
