@@ -6,7 +6,7 @@
     <div class="course-view">
         <div class="container">
             <div class="main-heading text-center">
-                <img class="img-fluid" src="{{ asset('images/video-streaming.png') }}" alt="">
+                <img class="img-fluid img-instructor" src="/{{ $course->thumbnail }}" alt="">
                 <h1>{{ $course->title }}</h1>
             </div>
 
@@ -14,45 +14,32 @@
             <div class="course">
                 <div class="course-subtitle">
                     <div>by Michael Grzesiek</div>
-                    <div>1hr32min</div>
+                    
                 </div>
                 <div class="course-info">
                     <div class="course-info-paragraph">
-                        Learn the basics of streaming by the popular twitch streamer Michael Grzesiek, better known as
-                        Shroud.
-                        He is
-                        a professional CS:GO and PUBG Player. This course is aimed for beginners and enthusiasts. We cover
-                        basic
-                        tools like OBS and Stream Labs. For advanced users, we offer special lessons for AutoHotKey to use a
-                        secondary keyboard for shortcuts to improve your streaming.
+                    @php $length = 500; @endphp
+                            {{ Str::substr($course->description, 0, $length) }}
+                            @if (Str::length($course->description) > $length)
+                                ...
+                            @endif
                     </div>
                     <div class="course-info-heading">Tools Used</div>
-                    <div class="course-info-paragraph">OBS, Stream Labs OBS, Photoshop, After Effects, AutoHotKey</div>
+                    <div class="course-info-paragraph">{{ $course->tools }}</div>
                 </div>
             </div>
             {{-- /course --}}
 
             {{-- row --}}
             <div class="row">
-                <x-video src="images/thumbnail-dual.png" title="Dual Monitor Setup" meta="4 Min"
+            @forelse ($videos as $video)
+                <x-video src="images/thumbnail-dual.png" title="{{$video->title}}" meta="4 Min"
                     description="Multiple monitors are necessary for streaming. Shroud covers the basics of computer setups." />
-                <x-video src="images/thumbnail-audio.png" title="Microphone Audio" meta="6 Min"
-                    description="Multiple monitors are necessary for streaming. Shroud covers the basics of computer setups." />
-                <x-video src="images/thumbnail-obs.png" title="The OBS Setup" meta="5 Min"
-                    description="Multiple monitors are necessary for streaming. Shroud covers the basics of computer setups." />
-                <x-video src="images/thumbnail-dual.png" title="Dual Monitor Setup" meta="4 Min"
-                    description="Multiple monitors are necessary for streaming. Shroud covers the basics of computer setups." />
-                <x-video src="images/thumbnail-audio.png" title="Microphone Audio" meta="6 Min"
-                    description="Multiple monitors are necessary for streaming. Shroud covers the basics of computer setups." />
-                <x-video src="images/thumbnail-obs.png" title="The OBS Setup" meta="5 Min"
-                    description="Multiple monitors are necessary for streaming. Shroud covers the basics of computer setups." />
-                <x-video src="images/thumbnail-dual.png" title="Dual Monitor Setup" meta="4 Min"
-                    description="Multiple monitors are necessary for streaming. Shroud covers the basics of computer setups." />
-                <x-video src="images/thumbnail-audio.png" title="Microphone Audio" meta="6 Min"
-                    description="Multiple monitors are necessary for streaming. Shroud covers the basics of computer setups." />
-                <x-video src="images/thumbnail-obs.png" title="The OBS Setup" meta="5 Min"
-                    description="Multiple monitors are necessary for streaming. Shroud covers the basics of computer setups." />
+                
             </div>
+            @empty
+
+            @endforelse
             {{-- /row --}}
 
         </div>
