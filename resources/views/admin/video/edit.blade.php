@@ -21,8 +21,8 @@
 
             </div>
             <div class="form-group">
-                <label for="tools">Tools</label>
-                <input type="text" name="tools" id="tools" class="form-control" value="{{ $video->tools }}" />
+                <label for="file">Upload Video</label>
+                <input type="file" name="file" id="file" class="form-control" value="{{ $video->file }}" />
             </div>
             <div class="form-group">
                 <label for="thumbnail">Upload Thumbnail</label>

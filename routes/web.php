@@ -66,6 +66,7 @@ Route::middleware("auth")->prefix("/admin")->group(function () {
   Route::post("/courses/new", [CourseController::class, 'store'])->name("course_create_submit");
   Route::get("/courses/{course}/edit", [CourseController::class, 'edit']);
   Route::get("/courses/{course}/videos/{video}/edit", [CourseVideoController::class, 'edit']);
+  Route::post("/courses/{course}/videos/{video}/edit", [CourseVideoController::class, 'update']);
   Route::get("/courses/{course}/videos/{video}/delete", [CourseVideoController::class, 'delete']);
   Route::post("/courses/{course}/edit", [CourseController::class, 'update']);
   Route::get("/courses/{course}/delete", [CourseController::class, 'delete']);

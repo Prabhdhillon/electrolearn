@@ -88,9 +88,19 @@ class CourseVideoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Course $course)
+    public function update(Course $course, Video $video)
     {
-        //
+        $video = Video::where("id", $video->id)->first();
+        $video->title = request()->input('title');
+        $video->description = request()->input('description');
+        if (request()->hasFile('file')) {
+            $video->file = request()->file('file')->store('uploads');
+        }
+        if (request()->hasFile('thumbnail')) {
+            $video->thumbnail = request()->file('thumbnail')->store('uploads');
+        }
+        $video->save();
+        return redirect()->back()->with("success", "Course Updated Successfully!");
     }
 
     /**
