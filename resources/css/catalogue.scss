@@ -48,8 +48,8 @@
     color: #fff;
 }
 .video-img{
-    width:300px;
-    height:168px;
+    width:350px;
+    height:180px;
     border-radius: 5px;
   }
 .video-title {
@@ -82,3 +82,27 @@
     font-size: 12px;
     font-weight: 400;
 }
+@media screen and (max-width: 700px) {
+    .search-box  {
+      width: 350px;
+    }
+    .video-img{
+      width:330px;
+      height:180px;
+      border-radius: 5px;
+      padding-bottom: 5px;
+    }
+    .video-title {
+      font-size: 28px;
+      font-weight: 700;
+  }
+  
+  .content-box{
+    width: 330px;
+  }
+  .video-row{
+    width: 330px;
+    padding-bottom: 15px;
+  }
+  }
+  
