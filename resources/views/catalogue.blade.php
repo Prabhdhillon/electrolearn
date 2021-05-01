@@ -31,10 +31,11 @@
 
 
 
-                    <div class="col-md-6 col-sm-12"><img src="/{{ $course->thumbnail }}" class="video-img img-fluid"></div>
+                    <div class="col-md-6 col-sm-12"><img src="/{{ $course->thumbnail }}" class="video-img img-fluid">
+                    </div>
                     <div class="col-md-6 col-sm-12 content-box">
                         <h6 class="video-title">{{ $course->title }}</h6>
-                        <h6 class="video-instructor">By Micheal G.</h6>
+                        <h6 class="video-instructor">{{ $course->author_id }}</h6>
 
                         <p class="video-discription">
                             @php $length = 100; @endphp

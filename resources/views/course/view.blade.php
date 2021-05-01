@@ -7,7 +7,7 @@
         <div class="container">
             <div class="main-heading text-center">
                 <img class="img-fluid" src="{{ asset('images/video-streaming.png') }}" alt="">
-                <h1>NodeJS - The Complete Guide (MVC, REST APIs, GraphQL, Deno)</h1>
+                <h1>{{ $course->title }}</h1>
             </div>
 
             {{-- course --}}

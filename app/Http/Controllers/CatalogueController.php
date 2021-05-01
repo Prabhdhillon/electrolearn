@@ -14,6 +14,9 @@ class CatalogueController extends Controller
     }
     public function showCourse(Course $course)
     {
+
+        $course = Course::find(1)->user()->author_id->name;
+
         return view("course.view", compact("course"));
     }
 }
