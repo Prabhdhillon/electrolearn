@@ -1,11 +1,22 @@
 @extends('layout.admin')
-
+@section('title')
+    Videos
+@endsection
 @section('content')
     <div class="container">
         <h2> {{ $course->title }}</h2>
         <div class="font-w600" style="font-size:24px;">Videos:</div>
         @forelse ($videos as $video)
             <div class="block block-rounded block-bordered mt-4">
+                <div class="block-header block-header-default">
+                    <h3 class="block-title">Settings</h3>
+                    <div class="block-options">
+                        <a href="/admin/courses/{{ $course->slug }}/videos/{{ $video->slug }}/edit"
+                            class="btn btn-warning">Edit</a>
+                        <a href="/admin/courses/{{ $course->slug }}/videos/{{ $video->slug }}/delete"
+                            class="btn btn-danger">Delete</a>
+                    </div>
+                </div>
                 <div class="block-content">
                     <table class="table table-striped table-borderless table-vcenter">
                         <tbody>
@@ -33,13 +44,15 @@
                 </div>
 
             </div>
-            <a href="/admin/courses/{{ $course->slug }}/videos/{{ $video->slug }}/edit" class="btn btn-warning">Edit</a>
-            <a href="/admin/courses/{{ $course->slug }}/videos/{{ $video->slug }}/delete"
-                class="btn btn-danger">Delete</a>
+
         @empty
 
         @endforelse
-
+        @if (session()->has('delete'))
+            <div class="alert alert-danger mt-3">
+                {{ session()->get('delete') }}
+            </div>
+        @endif
 
 
     </div>

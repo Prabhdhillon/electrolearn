@@ -1,6 +1,6 @@
 @extends('layout.admin')
 @section('title')
-    Edit Course
+    Edit Video
 @endsection
 @section('content')
 

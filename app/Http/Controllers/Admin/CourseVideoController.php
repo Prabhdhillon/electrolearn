@@ -103,4 +103,10 @@ class CourseVideoController extends Controller
     {
         //
     }
+    public function delete(Course $course, Video $video)
+    {
+        $course = Course::where("id", $course->id);
+        $video = Video::where("id", $video->id)->delete();
+        return redirect()->back()->with("delete", "Course Deleted!");
+    }
 }
