@@ -38,9 +38,9 @@ Route::get('/instructor', [InstructorController::class, 'instructor'])->middlewa
 Route::get('/catalogue', [CatalogueController::class, 'catalogue'])->middleware("auth")->name("catalogue");
 Route::get('/catalogue/{course}', [CatalogueController::class, 'showCourse'])->middleware("auth");
 
-Route::get ("/home", function () { 
+Route::get("/home", function () {
   return redirect("/");
-} );
+});
 
 Route::get("/admin/newuser", [AdminAuthController::class, 'register']);
 Route::post("/admin/newuser", [AdminAuthController::class, 'handleRegister']);
@@ -70,6 +70,7 @@ Route::middleware("auth")->prefix("/admin")->group(function () {
   Route::get("/courses/{course}/videos/{video}/edit", [CourseVideoController::class, 'edit']);
   Route::post("/courses/{course}/videos/{video}/edit", [CourseVideoController::class, 'update']);
   Route::get("/courses/{course}/videos/{video}/delete", [CourseVideoController::class, 'delete']);
+  Route::get("/courses/{course}/videos/{video}", [CourseVideoController::class, 'show']);
   Route::post("/courses/{course}/edit", [CourseController::class, 'update']);
   Route::get("/courses/{course}/delete", [CourseController::class, 'delete']);
 

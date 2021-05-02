@@ -35,7 +35,7 @@
                     </div>
                     <div class="col-md-6 col-sm-12 content-box">
                         <h6 class="video-title">{{ $course->title }}</h6>
-                        <h6 class="video-instructor">By {{ $user->name }}</h6>
+                        <h6 class="video-instructor">By</h6>
 
                         <p class="video-discription">
                             @php $length = 100; @endphp

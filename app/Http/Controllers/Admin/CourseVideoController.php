@@ -63,10 +63,11 @@ class CourseVideoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($course)
+    public function show(Course $course, Video $video)
     {
 
-        return view("admin.video.show");
+        // $video = Video::where("id", $video->id)->first();
+        return view("admin.video.show", compact('course', 'video'));
     }
 
     /**
@@ -100,7 +101,7 @@ class CourseVideoController extends Controller
             $video->thumbnail = request()->file('thumbnail')->store('uploads');
         }
         $video->save();
-        return redirect()->back()->with("success", "Course Updated Successfully!");
+        return redirect()->back()->with("success", "Video Updated Successfully!");
     }
 
     /**
@@ -117,6 +118,6 @@ class CourseVideoController extends Controller
     {
         $course = Course::where("id", $course->id);
         $video = Video::where("id", $video->id)->delete();
-        return redirect()->back()->with("delete", "Course Deleted!");
+        return redirect()->back()->with("delete", "Video Deleted!");
     }
 }

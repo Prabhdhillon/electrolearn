@@ -24,14 +24,15 @@
                             <tr>
                                 <td class="text-center w-25 d-none d-md-table-cell">
                                     <a class="item item-circle bg-primary text-white font-size-h2 mx-auto"
-                                        href="javascript:void(0)">
+                                        href="/admin/courses/{{ $course->slug }}/videos/{{ $video->slug }}">
                                         {{ $loop->index + 1 }}
                                     </a>
                                 </td>
                                 <td>
                                     <div class="py-4">
 
-                                        <a class="link-fx h4 mb-2 d-inline-block text-dark" href="javascript:void(0)">
+                                        <a class="link-fx h4 mb-2 d-inline-block text-dark"
+                                            href="/admin/courses/{{ $course->slug }}/videos/{{ $video->slug }}">
                                             {{ $video->title }}
                                         </a>
                                         <p class="text-muted mb-0">
