@@ -5,8 +5,8 @@
 @section('content')
     <div class="container">
         <h2> {{ $course->title }}</h2>
-        <div class="font-w600" style="font-size:24px;">Videos:</div>
-        <a href="/admin/courses/{{ $course->slug }}/videos/new" class="btn btn-primary mt-3">Upload Videos</a>
+        <div class="font-w600" style="font-size:24px;">Videos</div>
+        <a href="/admin/courses/{{ $course->slug }}/videos/create" class="btn btn-primary mt-3">Upload Videos</a>
         @forelse ($videos as $video)
             <div class="block block-rounded block-bordered mt-4">
                 <div class="block-header block-header-default">
@@ -14,8 +14,12 @@
                     <div class="block-options">
                         <a href="/admin/courses/{{ $course->slug }}/videos/{{ $video->slug }}/edit"
                             class="btn btn-warning">Edit</a>
-                        <a href="/admin/courses/{{ $course->slug }}/videos/{{ $video->slug }}/delete"
-                            class="btn btn-danger">Delete</a>
+                        <form class="d-inline" method="POST"
+                            action="/admin/courses/{{ $course->slug }}/videos/{{ $video->slug }}">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
                     </div>
                 </div>
                 <div class="block-content">

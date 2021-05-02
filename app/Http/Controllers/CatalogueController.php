@@ -6,20 +6,18 @@ use Illuminate\Http\Request;
 use App\Models\Course;
 use App\Models\User;
 use App\Models\Video;
+use Illuminate\Support\Facades\DB;
 
 class CatalogueController extends Controller
 {
     public function catalogue()
     {
-        $courses = Course::get();
+        $courses = Course::with("user")->get();
         return view("catalogue")->with("courses", $courses);
     }
-    public function showCourse(Course $course, User $user)
+    public function showCourse(Course $course)
     {
-
-
-        $course = Course::where("author_id", $user->name)->get();
-
+        $course->load("videos");
         return view("course.view", compact("course"));
     }
 }

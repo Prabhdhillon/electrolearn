@@ -62,21 +62,20 @@ Route::middleware("auth")->prefix("/admin")->group(function () {
   Route::get("/profile", [ProfileController::class, 'profile']);
   Route::get("/edit-profile", [ProfileController::class, 'edit_profile']);
   Route::post("/edit-profile", [ProfileController::class, 'update_profile']);
-
   Route::get("/courses", [CourseController::class, 'index']);
   Route::get("/courses/new", [CourseController::class, 'create']);
   Route::post("/courses/new", [CourseController::class, 'store'])->name("course_create_submit");
   Route::get("/courses/{course}/edit", [CourseController::class, 'edit']);
-  Route::get("/courses/{course}/videos/{video}/edit", [CourseVideoController::class, 'edit']);
-  Route::post("/courses/{course}/videos/{video}/edit", [CourseVideoController::class, 'update']);
-  Route::get("/courses/{course}/videos/{video}/delete", [CourseVideoController::class, 'delete']);
-  Route::get("/courses/{course}/videos/{video}", [CourseVideoController::class, 'show']);
+  // Route::get("/courses/{course}/videos/{video}/edit", [CourseVideoController::class, 'edit']);
+  // Route::put("/courses/{course}/videos/{video}", [CourseVideoController::class, 'update']);
+  // Route::delete("/courses/{course}/videos/{video}", [CourseVideoController::class, 'destroy']);
+  // Route::get("/courses/{course}/videos/create", [CourseVideoController::class, 'create']);
+  // Route::post("/courses/{course}/videos/create", [CourseVideoController::class, 'store']);
+  // Route::get("/courses/{course}/videos/{video}", [CourseVideoController::class, 'show']);
+  // Route::get("/courses/{course}/videos", [CourseVideoController::class, 'index']);
+  Route::resource('/courses/{course}/videos', CourseVideoController::class);
   Route::post("/courses/{course}/edit", [CourseController::class, 'update']);
   Route::get("/courses/{course}/delete", [CourseController::class, 'delete']);
-
-  Route::get("/courses/{course}/videos", [CourseVideoController::class, 'index']);
-  Route::get("/courses/{course}/videos/new", [CourseVideoController::class, 'create']);
-  Route::post("/courses/{course}/videos/new", [CourseVideoController::class, 'store']);
   Route::get("/resetpassword", [AdminAuthController::class, 'change_password']);
   Route::post("/resetpassword", [AdminAuthController::class, 'handlePassword']);
 });

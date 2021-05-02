@@ -27,9 +27,11 @@ class CourseVideoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Course $course)
     {
-        return view("admin.video.create");
+
+        // $video = Video::where("id", $video->id)->first();
+        return view("admin.video.create", compact('course'));
     }
 
     /**
@@ -110,11 +112,7 @@ class CourseVideoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        //
-    }
-    public function delete(Course $course, Video $video)
+    public function destroy(Course $course, Video $video)
     {
         $course = Course::where("id", $course->id);
         $video = Video::where("id", $video->id)->delete();

@@ -6,8 +6,8 @@
     <div class="container">
         <h2> {{ $video->title }}</h2>
         <div class="video-js-responsive-container vjs-hd">
-            <video class="video-js course-video" data-setup="{}" controls poster="{{ asset('images/thumb.png') }}">
-                <source src="{{ asset('images/video/react-1.mp4') }}" type="video/mp4" />
+            <video class="video-js course-video" data-setup="{}" controls poster="/{{ $video->thumbnail }}">
+                <source src="/{{ $video->file }}" type="video/mp4" />
             </video>
         </div>
 
