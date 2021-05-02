@@ -3,10 +3,25 @@
     Videos
 @endsection
 @section('content')
+    <!-- Hero -->
+    <div class="bg-dark bg-image" style="background-image: url('/media/photos/photo23@2x.jpg');">
+        <div class="bg-black-75">
+            <div class="content content-full content-top">
+                <div class="py-4 text-center">
+                    <h1 class="font-w700 text-white mb-2">
+                        {{ $course->title }}
+                    </h1>
+                    <h2 class="h3 font-w400 text-white-75">
+                        {{ $course->description }}
+                    </h2>
+                    <a href="/admin/courses/{{ $course->slug }}/videos/create" class="btn btn-primary mt-3">Upload
+                        Videos</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END Hero -->
     <div class="container">
-        <h2> {{ $course->title }}</h2>
-        <div class="font-w600" style="font-size:24px;">Videos</div>
-        <a href="/admin/courses/{{ $course->slug }}/videos/create" class="btn btn-primary mt-3">Upload Videos</a>
         @forelse ($videos as $video)
             <div class="block block-rounded block-bordered mt-4">
                 <div class="block-header block-header-default">

@@ -12,8 +12,23 @@ $colors = collect(['bg-gd-dusk-op', 'bg-gd-fruit-op', 'bg-gd-aqua-op', 'bg-gd-su
 
 
 @section('content')
+    <div class="bg-dark bg-image" style="background-image: url('/media/photos/photo21@2x.jpg');">
+        <div class="bg-black-75">
+            <div class="content content-full content-top">
+                <div class="py-4 text-center">
+                    <h1 class="font-w700 text-white mb-2">
+                        Welcome To Electrolearn
+                    </h1>
+                    <h2 class="h3 font-w400 text-white-75">
+                        The Biggest Platform For Students and Teachers
+                    </h2>
 
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container mt-5">
+        <h3 class="font-w700">Your Courses</h3>
         <section class="row mb-5">
             @forelse ($courses as $course)
                 <div class="col-md-6" style="position: relative;">

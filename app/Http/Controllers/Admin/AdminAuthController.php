@@ -54,7 +54,7 @@ class AdminAuthController extends Controller
             return redirect()->back()->with("error", "Wrong Email or Password");
         }
         Auth::login($admin);
-        return redirect('/admin/home');
+        return redirect('/admin/courses');
     }
 
 

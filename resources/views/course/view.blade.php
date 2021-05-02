@@ -14,7 +14,7 @@
             {{-- course --}}
             <div class="course">
                 <div class="course-subtitle">
-                    <div>by Michael Grzesiek</div>
+                    <div>by Michael Grzeniek</div>
 
                 </div>
                 <div class="course-info">
