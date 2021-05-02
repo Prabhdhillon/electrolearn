@@ -15,9 +15,4 @@ class CatalogueController extends Controller
         $courses = Course::with("user")->get();
         return view("catalogue")->with("courses", $courses);
     }
-    public function showCourse(Course $course)
-    {
-        $course->load("videos");
-        return view("course.view", compact("course"));
-    }
 }

@@ -4,7 +4,7 @@
         <div class="lecture-info">
             <div class="lecture-title">
                 {{ isset($title) ? $title : 'Unknown title' }}
-                <div class="lecture-meta">{{ isset($meta) ? $meta : 'Unknown time' }}</div>
+
             </div>
             <div class="lecture-description">{{ isset($description) ? $description : 'Unknown decription' }}</div>
         </div>

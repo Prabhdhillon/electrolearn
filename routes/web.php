@@ -11,6 +11,8 @@ use App\Http\Controllers\Admin\AdminAuthController;
 use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\CourseVideoController;
 use App\Http\Controllers\Admin\ProfileController;
+use App\Http\Controllers\Course\VideoController;
+use App\Http\Controllers\Course\ViewController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -32,11 +34,10 @@ Route::get('/login', [AuthController::class, 'login'])->middleware("guest")->nam
 Route::post('/login', [AuthController::class, 'handleLogin']);
 Route::get('/register', [AuthController::class, 'register'])->middleware("guest")->name("register");
 Route::post('/register', [AuthController::class, 'handleRegister']);
-Route::get('/course-overview', [Course\ViewController::class, 'index'])->middleware("auth")->name("home");
-Route::get('/course', [Course\VideoController::class, 'index'])->middleware("auth");
 Route::get('/instructor', [InstructorController::class, 'instructor'])->middleware("auth")->name("instructor");
 Route::get('/catalogue', [CatalogueController::class, 'catalogue'])->middleware("auth")->name("catalogue");
-Route::get('/catalogue/{course}', [CatalogueController::class, 'showCourse'])->middleware("auth");
+Route::get('/catalogue/{course}', [ViewController::class, 'showCourse'])->middleware("auth");
+Route::get('/catalogue/{course}/video/{video}', [VideoController::class, 'index'])->middleware("auth");
 
 Route::get("/home", function () {
   return redirect("/");

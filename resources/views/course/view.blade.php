@@ -14,7 +14,7 @@
             {{-- course --}}
             <div class="course">
                 <div class="course-subtitle">
-                    <div>by Michael Grzeniek</div>
+                    <div>By {{ $course->user->name }}</div>
 
                 </div>
                 <div class="course-info">
@@ -34,9 +34,10 @@
             {{-- row --}}
             <div class="row">
                 @forelse ($course->videos as $video)
-                    <x-video src="images/thumbnail-dual.png" title="{{ $video->title }}" meta="4 Min"
-                        description="Multiple monitors are necessary for streaming. Shroud covers the basics of computer setups." />
-
+                    <a href="/catalogue/{{ $course->slug }}/video/{{ $video->slug }}" class="video-link">
+                        <x-video src="/{{ $video->thumbnail }}" title="{{ $video->title }}"
+                            description="{{ $video->description }}" />
+                    </a>
 
                 @empty
 
