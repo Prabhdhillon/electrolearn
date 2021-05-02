@@ -37,12 +37,12 @@
                     <x-video src="images/thumbnail-dual.png" title="{{ $video->title }}" meta="4 Min"
                         description="Multiple monitors are necessary for streaming. Shroud covers the basics of computer setups." />
 
+
+                @empty
+
+                @endforelse
+                {{-- /row --}}
             </div>
-        @empty
-
-            @endforelse
-            {{-- /row --}}
-
         </div>
     </div>
 
