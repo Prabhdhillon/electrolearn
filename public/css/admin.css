@@ -1,23 +1,3 @@
 .img-screen {
-    width: 100% !important;
-}
-.video-js-responsive-container.vjs-hd {
-    padding-top: 56.25%;
-}
-
-.video-js-responsive-container.vjs-sd {
-    padding-top: 75%;
-}
-
-.video-js-responsive-container {
-    width: 100%;
-    position: relative;
-}
-
-.video-js-responsive-container .video-js {
-    height: 100% !important;
-    width: 100% !important;
-    position: absolute;
-    top: 0;
-    left: 0;
+  width: 100% !important;
 }

@@ -7,8 +7,11 @@
 
     <!-- Page Content -->
     <div class="content">
-        <form action="" method="POST" enctype="multipart/form-data">
+        <form action="/admin/courses/{{ $course->slug }}/videos/{{ $video->slug }}" method="POST"
+            enctype="multipart/form-data">
+
             @csrf
+
             <x-admin.input label="Enter the Title" id="title" type="text" placeholder="Enter the title" />
             <x-admin.input label="Description" id="description" type="textarea" placeholder="Enter video description" />
             <x-admin.input label="Upload Video" id="file" type="file" />

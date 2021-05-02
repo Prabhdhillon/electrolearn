@@ -34,16 +34,34 @@
             {{-- row --}}
             <div class="row">
                 @forelse ($course->videos as $video)
-                    <a href="/catalogue/{{ $course->slug }}/video/{{ $video->slug }}" class="video-link">
-                        <x-video src="/{{ $video->thumbnail }}" title="{{ $video->title }}"
-                            description="{{ $video->description }}" />
-                    </a>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <a href="/catalogue/{{ $course->slug }}/video/{{ $video->slug }}" class="video-link">
+                            <div class="lecture mx-auto">
 
+                                <img class="lecture-image" src="/{{ $video->thumbnail }}" alt="">
+
+                                <div class="lecture-info">
+                                    <div class="lecture-title">
+
+                                        {{ $video->title }}
+
+                                    </div>
+                                    <div class="lecture-description">
+
+                                        {{ $video->description }}
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 @empty
 
                 @endforelse
-                {{-- /row --}}
             </div>
+            {{-- /row --}}
+
         </div>
     </div>
 

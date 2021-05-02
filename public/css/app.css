@@ -92,12 +92,22 @@ body {
   text-align: center;
   margin-bottom: 50px;
 }
+.course-view .video-link {
+  text-decoration: none;
+  color: white;
+}
 
 @media (min-width: 1198px) {
   .course {
     width: 50vw;
   }
 }
+.img-instructor {
+  width: 679px;
+  height: 403px;
+  border-radius: 20px;
+}
+
 .lecture {
   margin-bottom: 50px;
 }
@@ -980,10 +990,3 @@ body {
   top: 0;
   left: 0;
 }
-.img-instructor{
-  width:679px;
-  height:403px;
-  border-radius: 20px;
-
-}
-

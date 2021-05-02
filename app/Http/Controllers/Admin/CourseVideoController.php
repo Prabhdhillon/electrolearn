@@ -27,11 +27,11 @@ class CourseVideoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Course $course)
+    public function create(Course $course, Video $video)
     {
 
         // $video = Video::where("id", $video->id)->first();
-        return view("admin.video.create", compact('course'));
+        return view("admin.video.create", compact('course', 'video'));
     }
 
     /**
