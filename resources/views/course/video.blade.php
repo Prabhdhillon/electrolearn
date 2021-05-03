@@ -20,12 +20,14 @@
 
             </div>
             <div class="button-group button-group-margin">
-                <button type="submit" class="btn btn-secondary">Previous</button>
-                <button type="submit" class="btn btn-primary">Next</button>
+                <a href="{{ URL::to('catalogue/{$course->slug' . $previous) }}"><button type="submit"
+                        class="btn btn-secondary">Previous</button></a>
+                <a href="{{ URL::to('catalogue/{$course->slug}/video/{$video->slug}' . $next) }}"><button type="submit"
+                        class="btn btn-secondary">Next</button></a>
             </div>
             <div class="button-group">
-                <div class="course-player-links">0. Introduction</div>
-                <div class="course-player-links">1. Styled Components</div>
+                <div class="course-player-links"> {{ $previous->title }}</div>
+                <div class="course-player-links"> {{ $next->title }}</div>
             </div>
         </div>
     </div>
