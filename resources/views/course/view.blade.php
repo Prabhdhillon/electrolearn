@@ -37,21 +37,14 @@
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <a href="/catalogue/{{ $course->slug }}/video/{{ $video->slug }}" class="video-link">
                             <div class="lecture mx-auto">
-
                                 <img class="lecture-image" src="/{{ $video->thumbnail }}" alt="">
-
                                 <div class="lecture-info">
                                     <div class="lecture-title">
-
                                         {{ $video->title }}
-
                                     </div>
                                     <div class="lecture-description">
-
                                         {{ $video->description }}
-
                                     </div>
-
                                 </div>
                             </div>
                         </a>
@@ -61,7 +54,6 @@
                 @endforelse
             </div>
             {{-- /row --}}
-
         </div>
     </div>
 

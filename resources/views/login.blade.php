@@ -14,7 +14,7 @@
                 <x-auth-field label="Password" id="password" type="password" />
                 <div class="form-group-button">
                     <button type="submit" class="btn btn-primary">Login</button>
-                    <a href="" class="btn-link">Are you new here?</a>
+                    <a href="/register" class="btn-link">Are you new here?</a>
                 </div>
             </form>
         </div>

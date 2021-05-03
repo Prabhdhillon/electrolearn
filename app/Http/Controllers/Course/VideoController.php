@@ -11,7 +11,7 @@ class VideoController extends Controller
     public function index(Course $course, Video $video)
 
     {
-        $video = Video::where("id", $video->id)->first();
+        // $video = Video::where("id", $video->id)->first();
         return view("course.video", compact("video"));
     }
 }

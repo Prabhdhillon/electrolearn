@@ -16,7 +16,7 @@
                 <x-auth-field label="I work as a" id="work" type="text" placeholder="Developer / Designer / Student" />
                 <div class="form-group-button">
                     <button type="submit" class="btn btn-primary">Create account</button>
-                    <a href="/register" class="btn-link">Already have an account?</a>
+                    <a href="/login" class="btn-link">Already have an account?</a>
                 </div>
                 @if (session()->has('success'))
                     <div class="alert alert-success mt-3">
