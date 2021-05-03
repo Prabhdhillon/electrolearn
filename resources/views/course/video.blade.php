@@ -17,18 +17,27 @@
 
 
 
-
             </div>
             <div class="button-group button-group-margin">
-                <a href="{{ URL::to('catalogue/{$course->slug' . $previous) }}"><button type="submit"
-                        class="btn btn-secondary">Previous</button></a>
-                <a href="{{ URL::to('catalogue/{$course->slug}/video/{$video->slug}' . $next) }}"><button type="submit"
-                        class="btn btn-secondary">Next</button></a>
+                @isset($previous)
+                    <div>
+                        <a href="/catalogue/{{ $course->slug }}/video/{{ $previous->slug }}"><button type="submit"
+                                class="btn btn-secondary">Previous</button></a>
+                        <div class="course-player-links"> {{ $previous->title }}</div>
+                    </div>
+                @else
+                    <div></div>
+                @endisset
+
+                @isset($next)
+                    <div>
+                        <a href="/catalogue/{{ $course->slug }}/video/{{ $next->slug }}"><button type="submit"
+                                class="btn btn-primary">Next</button></a>
+                        <div class="course-player-links"> {{ $next->title }}</div>
+                    </div>
+                @endisset
             </div>
-            <div class="button-group">
-                <div class="course-player-links"> {{ $previous->title }}</div>
-                <div class="course-player-links"> {{ $next->title }}</div>
-            </div>
+
         </div>
     </div>
 @endsection
