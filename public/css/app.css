@@ -434,6 +434,13 @@ body {
   font-weight: 400;
 }
 
+.instuctor-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 1000px;
+  padding-bottom: 5px;
+}
+
 @media screen and (max-width: 700px) {
   .search-box {
     width: 350px;
@@ -999,12 +1006,4 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-}
-
-
-.instuctor-img{
-  width:50px;
-    height:50px;
-    border-radius: 1000px;
-    padding-bottom: 5px;
 }
