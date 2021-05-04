@@ -20,28 +20,27 @@
 
     <!--VIDEOS start-->
     <div class="video container">
-
-    @forelse($courses as $course)
         <div class="row video-row mx-auto">
-
-            <div class="col"><img src="/{{ $course->thumbnail }}" class="video-img"></div>
+            <div class="col"><img src="{{ asset('images/thumbnail-audio.png') }}" class="video-img"></div>
             <div class="col">
-                <h6 class="video-title">{{ $course->title }}</h6>
+                <h6 class="video-title">Michael Grezniek</h6>
                 <h6 class="video-instructor">By Micheal G.</h6>
-                
-                <p class="video-discription"> @php $length = 100; @endphp
-                            {{ Str::substr($course->description, 0, $length) }}
-                            @if (Str::length($course->description) > $length)
-                                ...
-                            @endif</p>
-                <button class="video-btn btn">BIGNNER</button>
+                <p class="video-discription">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque voluptates vero a, ducimus blanditiis
+                    deleniti inventore consectetur minima quod delectus rerum neque dignissimos officiis.
+                </p>
+                {{-- <p class="video-discription"> @php $length = 100; @endphp
+                    {{ Str::substr($course->description, 0, $length) }}
+                    @if (Str::length($course->description) > $length)
+                        ...
+                    @endif
+                </p> --}}
+                <button class="video-btn btn">BEGIN</button>
 
             </div>
         </div>
-      
-        @empty
-                No courses to show!
-            @endforelse
+
+
     </div>
     <!--VIDEOS ends-->
 
