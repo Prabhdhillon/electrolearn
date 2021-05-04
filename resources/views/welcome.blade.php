@@ -10,11 +10,10 @@
         <h1 class="mt-3 introduction-heading">Start Learning for FREE!</h1>
         <div class="row mt-3 mx-auto introduction-row">
 
-            <button class="btn btn-sm introduction-btn mt-3 me-4"><i class="fas fa-play me-2"></i>Watch</button>
-            <button class="btn btn-sm introduction-btn mt-3"><i class="far fa-question-circle me-2"></i>Get
-                Help</button>
+            <button class="btn btn-sm introduction-btn mt-3 me-4">Login</button>
+            <button class="btn btn-sm introduction-btn mt-3">Register</button>
         </div>
-        <h5 class="mt-3 introduction-line">Made By Industry Professional</h5>
+        <h5 class="mt-3 introduction-line">Made By <span class="electro">Electrobyte</span></h5>
 
 
     </div>
