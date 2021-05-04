@@ -13,6 +13,7 @@ use App\Http\Controllers\Admin\CourseVideoController;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Course\VideoController;
 use App\Http\Controllers\Course\ViewController;
+use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -26,17 +27,14 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get("/", function () {
-  return view("welcome");
-});
 
+
+Route::get('/', [WelcomeController::class, 'index']);
 Route::get('/login', [AuthController::class, 'login'])->middleware("guest")->name("login");
 Route::post('/login', [AuthController::class, 'handleLogin']);
 Route::get('/register', [AuthController::class, 'register'])->middleware("guest")->name("register");
 Route::post('/register', [AuthController::class, 'handleRegister']);
-Route::get('/instructors', [InstructorController::class, 'index'])->middleware("auth");
-
-Route::get('/instructors/{$users->id}', [InstructorController::class, 'instructor'])->middleware("auth");
+Route::get('/instructor', [InstructorController::class, 'index'])->middleware("auth");
 Route::get('/catalogue', [CatalogueController::class, 'catalogue'])->middleware("auth")->name("catalogue");
 Route::get('/catalogue/{course}', [ViewController::class, 'showCourse'])->middleware("auth");
 Route::get('/catalogue/{course}/video/{video}', [VideoController::class, 'index'])->middleware("auth");

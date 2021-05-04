@@ -38,7 +38,7 @@
                                         <a class="nav-link me-5" aria-current="page" href="/">Home</a>
                                     </li>
                                     <li class="nav-item ">
-                                        <a class="nav-link me-5 " href="/instructors">Instructors</a>
+                                        <a class="nav-link me-5 " href="/instructor">Instructors</a>
                                     </li>
                                     <li class="nav-item ">
                                         <a class="nav-link me-5" href="/catalogue">Courses</a>
@@ -104,7 +104,7 @@
                             <a>SUBSCRIPTION</a>
                         </li>
                     </ul>
-                    <p class="footer-copyright ms-4"> COPYRIGHT AND ALL RIGHTS RESERVED SINCE 2018</p>
+                    <p class="footer-copyright ms-4"> COPYRIGHT AND ALL RIGHTS RESERVED SINCE 2021</p>
                 </div>
             </div>
         </div>

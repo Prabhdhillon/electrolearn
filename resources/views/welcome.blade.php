@@ -25,7 +25,7 @@
 
     <!--Discipline section starts-->
     <div class="discipline container">
-        <h1 class="mt-3 heading discipline-heading">Choose Your Discipline</h1>
+        <h1 class="mt-3 heading discipline-heading">Disciplines At Electrolearn</h1>
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm"><img class="discipline-card" src="{{ asset('images/card-1.png') }}">
             </div>
@@ -158,78 +158,22 @@
     <div class="trending container">
         <h1 class="ternding-title heading">Trending Courses</h1>
         <div class="row trending-row">
-            <div class="col-lg-4 col-md-6 col-sm-12 trending-col">
-                <div class="trending-card mx-auto">
-                    <img src="{{ asset('images/trend-card-img.png') }} " class="trending-card-img ">
-                    <h6 class="trending-card-title mt-2">Mastering Figma</h6>
-                    <p class="trending-card-subtitle mt-2">By Wes.B</p>
+            @foreach ($courses->slice(0, 3) as $course)
+                <div class="col-lg-4 col-md-6 col-sm-12 trending-col">
+                    <a href="/catalogue/{{ $course->slug }}" class="video-link">
+                        <div class="trending-card mx-auto">
+                            <img src="/{{ $course->thumbnail }} " class="trending-card-img ">
+                            <h6 class="trending-card-title mt-2">{{ $course->title }}</h6>
+                            <p class="trending-card-subtitle mt-2">By {{ $course->user->name }}</p>
+                        </div>
+                    </a>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 trending-col">
-                <div class="trending-card mx-auto">
-                    <img src="{{ asset('images/trend-card-img.png') }} " class="trending-card-img ">
-                    <h6 class="trending-card-title">Mastering Figma</h6>
-                    <p class="trending-card-subtitle">By Wes.B</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 trending-col">
-                <div class="trending-card mx-auto">
-                    <img src="{{ asset('images/trend-card-img.png') }} " class="trending-card-img ">
-                    <h6 class="trending-card-title">Mastering Figma</h6>
-                    <p class="trending-card-subtitle">By Wes.B</p>
-                </div>
-            </div>
+            @endforeach
+            {{-- @forelse ($courses as $course)
 
+            @empty
 
-            <!--row2-->
-
-            <div class="col-lg-4 col-md-6 col-sm-12 trending-col">
-                <div class="trending-card mx-auto">
-                    <img src="{{ asset('images/trend-card-img.png') }} " class="trending-card-img">
-                    <h6 class="trending-card-title mt-2">Mastering Figma</h6>
-                    <p class="trending-card-subtitle mt-2">By Wes.B</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 trending-col">
-                <div class="trending-card mx-auto">
-                    <img src="{{ asset('images/trend-card-img.png') }} " class="trending-card-img">
-                    <h6 class="trending-card-title">Mastering Figma</h6>
-                    <p class="trending-card-subtitle">By Wes.B</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 trending-col">
-                <div class="trending-card mx-auto">
-                    <img src="{{ asset('images/trend-card-img.png') }} " class="trending-card-img">
-                    <h6 class="trending-card-title">Mastering Figma</h6>
-                    <p class="trending-card-subtitle">By Wes.B</p>
-                </div>
-            </div>
-
-
-            <!--row3-->
-
-            <div class="col-lg-4 col-md-6 col-sm-12 trending-col">
-                <div class="trending-card mx-auto">
-                    <img src="{{ asset('images/trend-card-img.png') }} " class="trending-card-img">
-                    <h6 class="trending-card-title mt-2">Mastering Figma</h6>
-                    <p class="trending-card-subtitle mt-2">By Wes.B</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 trending-col">
-                <div class="trending-card mx-auto">
-                    <img src="{{ asset('images/trend-card-img.png') }} " class="trending-card-img">
-                    <h6 class="trending-card-title">Mastering Figma</h6>
-                    <p class="trending-card-subtitle">By Wes.B</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 trending-col">
-                <div class="trending-card mx-auto">
-                    <img src="{{ asset('images/trend-card-img.png') }} " class="trending-card-img">
-                    <h6 class="trending-card-title">Mastering Figma</h6>
-                    <p class="trending-card-subtitle">By Wes.B</p>
-                </div>
-            </div>
-            <button class="btn btn-lg trending-btn mx-auto">LOAD MORE</button>
+            @endforelse --}}
         </div>
         <!--TRENDING ends-->
 
