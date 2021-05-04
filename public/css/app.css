@@ -892,8 +892,8 @@ body {
 }
 
 .trending-card-img {
-  width: 350px;
-  height: auto;
+  width: 384px;
+  height: 219px;
 }
 
 .trending-card {
@@ -905,6 +905,15 @@ body {
   text-align: left;
   font-weight: 700;
   font-size: 18px;
+}
+
+.video-link {
+  text-decoration: none;
+  color: white;
+}
+
+.video-link:hover {
+  color: white;
 }
 
 .trending-card-subtitle {
