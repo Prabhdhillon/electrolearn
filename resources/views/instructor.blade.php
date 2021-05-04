@@ -47,7 +47,7 @@
 
     <div class="buttons container">
 
-        <p class="buttons-para ">Showing 10 courses from 132 courses</p>
+        
         <button class="button-secondary button me-4">Previous</button>
         <button class="button-active button">Next</button>
     </div>

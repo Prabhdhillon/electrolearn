@@ -999,3 +999,18 @@ body {
     border-radius: 1000px;
     padding-bottom: 5px;
 }
+.button-secondary {
+  font-size: 14px;
+  background-color: #30313a;
+  color: #4a4c5a;
+}
+.button-active {
+  font-size: 14px;
+  background-color: #224eff;
+  color: #fff;
+}
+
+.video-link {
+ 
+  text-decoration: none;
+}
