@@ -38,7 +38,7 @@
                                         <a class="nav-link me-5" aria-current="page" href="/">Home</a>
                                     </li>
                                     <li class="nav-item ">
-                                        <a class="nav-link me-5 " href="#">Disciplines</a>
+                                        <a class="nav-link me-5 " href="/instructors">Instructors</a>
                                     </li>
                                     <li class="nav-item ">
                                         <a class="nav-link me-5" href="/catalogue">Courses</a>
@@ -59,7 +59,7 @@
                                         <a class="nav-link me-5" href="/catalogue">Courses</a>
                                     </li>
                                     <li class="nav-item ml-3">
-                                        <a class="nav-link" href="#"><button type="button"
+                                        <a class="nav-link" href="/register"><button type="button"
                                                 class="btn btn-sm btn-secondary nav-btn">Get Started</button></a>
                                     </li>
                                 @endauth
@@ -82,7 +82,7 @@
                 <div class="footer-content container">
                     <ul class="footer-list">
                         <li class="footer-logo me-5">
-                            <a class="footer-brand" href="#"> <img class="me-1" src="{{ asset('images/logo.png') }}"
+                            <a class="footer-brand" href="/"> <img class="me-1" src="{{ asset('images/logo.png') }}"
                                     width="25" height="25">ElectroLearn</a>
                         </li>
                         <li class="footer-list-item me-3">
