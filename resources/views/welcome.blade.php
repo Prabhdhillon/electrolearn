@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="introduction mt-5 container">
-        <img class="mt-10 display-image" src="{{ asset('images/front.png') }}">
+        <img class="mt-10 display-image" src="{{ asset('images/Course_Image.png') }}">
         <h1 class="mt-3 introduction-heading">Start Learning for FREE!</h1>
         <div class="row mt-3 mx-auto introduction-row">
 
