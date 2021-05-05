@@ -11,7 +11,7 @@
 
     </div>
 
-    <div class="makers container">
+    <<<<<<< HEAD <div class="makers container">
         <div class="row row-makers">
             <div class="col-md-4 col-sm-12 col-makers-img"><img class="img-makers img-fluid"
                     src="{{ asset('images/tushar.jpeg') }}"></div>
@@ -37,6 +37,8 @@
                     Along with this I am a UI/UX Designer.
                 </p>
             </div>
+
+
         </div>
-    </div>
-@endsection
+        </div>
+    @endsection

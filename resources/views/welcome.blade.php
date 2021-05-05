@@ -32,24 +32,24 @@
     <!--Discipline section starts-->
     <div class="discipline container">
         <h1 class="mt-3 heading discipline-heading">Disciplines At Electrolearn</h1>
-        <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm"><img class="discipline-card" src="{{ asset('images/card-1.png') }}">
+        <div class="row " >
+            <div class="col-lg-3 col-md-6 col-sm"data-aos="flip-left"><img class="discipline-card" src="{{ asset('images/card-1.png') }}">
             </div>
-            <div class="col-lg-3 col-md-6 col-sm"><img class="discipline-card" src="{{ asset('images/card-2.png') }}">
+            <div class="col-lg-3 col-md-6 col-sm"data-aos="flip-left"><img class="discipline-card" src="{{ asset('images/card-2.png') }}">
             </div>
-            <div class="col-lg-3 col-md-6 col-sm"><img class="discipline-card" src="{{ asset('images/card-3.png') }}">
+            <div class="col-lg-3 col-md-6 col-sm"data-aos="flip-left"><img class="discipline-card" src="{{ asset('images/card-3.png') }}">
             </div>
-            <div class="col-lg-3 col-md-6 col-sm"><img class="discipline-card" src="{{ asset('images/card-4.png') }}">
+            <div class="col-lg-3 col-md-6 col-sm"data-aos="flip-left"><img class="discipline-card" src="{{ asset('images/card-4.png') }}">
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm "><img class="discipline-card" src="{{ asset('images/card-5.png') }}">
+            <div class="col-lg-3 col-md-6 col-sm "data-aos="flip-left"><img class="discipline-card" src="{{ asset('images/card-5.png') }}">
             </div>
-            <div class="col-lg-3 col-md-6 col-sm "><img class="discipline-card" src="{{ asset('images/card-6.png') }}">
+            <div class="col-lg-3 col-md-6 col-sm "data-aos="flip-left"><img class="discipline-card" src="{{ asset('images/card-6.png') }}">
             </div>
-            <div class="col-lg-3 col-md-6 col-sm "><img class="discipline-card" src="{{ asset('images/card-7.png') }}">
+            <div class="col-lg-3 col-md-6 col-sm "data-aos="flip-left"><img class="discipline-card" src="{{ asset('images/card-7.png') }}">
             </div>
-            <div class="col-lg-3 col-md-6 col-sm "><img class="discipline-card" src="{{ asset('images/card-8.png') }}">
+            <div class="col-lg-3 col-md-6 col-sm "data-aos="flip-left"><img class="discipline-card" src="{{ asset('images/card-8.png') }}">
             </div>
         </div>
     </div>
@@ -119,7 +119,7 @@
 
             <div class="row">
                 <div class="col-md-6 col-sm-12">
-                    <img class="showcase-img" src="{{ asset('images/person2.png') }}">
+                    <img class="showcase-img" data-aos="fade-right"src="{{ asset('images/person2.png') }}">
                 </div>
                 <div class="col-md-6 col-sm-12">
 
