@@ -13,9 +13,7 @@
             <h1 class="catalogue-title heading mt-5 ">Courses</h1>
             <div class="search-box mx-auto">
                 <form class="catalogue-search ">
-
                     <i class="fa fa-search ms-2"></i>
-
                     <input type="search"  class="gsearch my-auto" name="gsearch">
                 </form>
             </div>
