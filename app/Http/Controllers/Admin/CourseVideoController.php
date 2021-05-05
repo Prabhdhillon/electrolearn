@@ -45,8 +45,8 @@ class CourseVideoController extends Controller
         $validatedRequest = request()->validate([
             'title' => 'required|min:3|max:120',
             'description' => 'required',
-            'file' => 'required|file|',
-            'thumbnail' => 'required|file|max:2000',
+            'file' => 'required|file|mimetypes:video/avi,video/mpeg,video/quicktime',
+            'thumbnail' => 'required|file|max:2000|mimes:jpg,bmp,png',
         ]);
 
         $video = new Video($validatedRequest);
