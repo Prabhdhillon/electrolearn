@@ -13,7 +13,7 @@
 
 <div class="makers container">
     <div class="row row-makers">
-        <div class="col-md-4 col-sm-12 col-makers-img"><img class="img-makers img-fluid" src="{{ asset('images/tushar.jpeg') }}"></div>
+        <div class="col-md-4 col-sm-12 col-makers-img"><img class="img-makers img-fluid" data-aos="fade-right" src="{{ asset('images/tushar.jpeg') }}"></div>
         <div class="col-md-8 col-sm-12 col-makers-content">
             <h1 class="makers-name">Tushar Arora</h1>
             <h3 class="makers-specifications">Laravel | PHP | ReactJs | Full Stack Developer </h3>
@@ -25,7 +25,7 @@
         </div>
     </div>
     <div class="row row-makers">
-        <div class="col-md-4 col-sm-12 col-makers-img"><img class="img-makers img-fluid" src="{{ asset('images/prabh.png') }}"></div>
+        <div class="col-md-4 col-sm-12 col-makers-img"><img class="img-makers img-fluid"data-aos="fade-right"src="{{ asset('images/prabh.png') }}"></div>
         <div class="col-md-8 col-sm-12 col-makers-content">
             <h1 class="makers-name">Prabhjot</h1>
             <h3 class="makers-specifications">ReactJs | Laravel | Full Stack Developer </h3>
