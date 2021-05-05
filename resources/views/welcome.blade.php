@@ -21,7 +21,7 @@
                 <a href="/login"> <button class="btn btn-sm introduction-btn mt-3 me-4">Login</button></a>
                 <a href="/register"> <button class="btn btn-sm introduction-btn mt-3">Register</button></a>
             </div>
-            <h5 class="mt-3 introduction-line">Made By <span class="electro">Electrobyte</span></h5>
+            <h5 class="mt-4 introduction-line">Made By <span class="electro ">Electrobyte</span></h5>
         </div>
     @endauth
     <!--introducton saction ends-->
