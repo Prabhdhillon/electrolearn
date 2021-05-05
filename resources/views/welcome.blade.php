@@ -10,8 +10,8 @@
         <h1 class="mt-3 introduction-heading">Start Learning for FREE!</h1>
         <div class="row mt-3 mx-auto introduction-row">
 
-            <button class="btn btn-sm introduction-btn mt-3 me-4">Login</button>
-            <button class="btn btn-sm introduction-btn mt-3">Register</button>
+           <a href="/login"> <button class="btn btn-sm introduction-btn mt-3 me-4">Login</button></a>
+           <a href="/register"> <button class="btn btn-sm introduction-btn mt-3">Register</button></a>
         </div>
         <h5 class="mt-3 introduction-line">Made By <span class="electro">Electrobyte</span></h5>
 
