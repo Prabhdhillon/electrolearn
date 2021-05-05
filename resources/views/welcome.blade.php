@@ -10,14 +10,16 @@
             <img class="mt-10 display-image" src="{{ asset('images/Course_Image.png') }}">
             <h1 class="mt-3 introduction-heading">Start Learning for FREE!</h1>
         </div>
+
+
     @else
         <div class="introduction mt-5 container">
             <img class="mt-10 display-image" src="{{ asset('images/Course_Image.png') }}">
             <h1 class="mt-3 introduction-heading">Start Learning for FREE!</h1>
 
             <div class="row mt-3 mx-auto introduction-row">
-                <a class="video-link" href="/login"><button class="btn btn-sm introduction-btn mt-3 me-4">Login</button></a>
-                <a class="video-link" href="/register"> <button class="btn btn-sm introduction-btn mt-3">Register</button></a>
+                <a href="/login"> <button class="btn btn-sm introduction-btn mt-3 me-4">Login</button></a>
+                <a href="/register"> <button class="btn btn-sm introduction-btn mt-3">Register</button></a>
             </div>
             <h5 class="mt-3 introduction-line">Made By <span class="electro">Electrobyte</span></h5>
         </div>

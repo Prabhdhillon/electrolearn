@@ -40,10 +40,12 @@
     border-radius: 100px;
 }
 .button-secondary {
+    font-size: 14px;
     background-color: #30313a;
     color: #4a4c5a;
 }
 .button-active {
+    font-size: 14px;
     background-color: #224eff;
     color: #fff;
 }
@@ -81,6 +83,7 @@
     background-color: #773dd6;
     font-size: 12px;
     font-weight: 400;
+    text-decoration: none;
 }
 .instuctor-img{
     width:50px;
