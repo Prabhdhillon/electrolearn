@@ -1,7 +1,7 @@
 @extends("layout.auth")
 
 @section('title')
-    Instructor
+
 @endsection
 
 @section('content')
@@ -27,7 +27,7 @@
                 <h6 class="video-instructor">By Micheal G.</h6>
                 <p class="video-discription">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque voluptates vero a, ducimus blanditiis
-                    
+
                 </p>
                 {{-- <p class="video-discription"> @php $length = 100; @endphp
                     {{ Str::substr($course->description, 0, $length) }}
@@ -46,7 +46,7 @@
 
     <div class="buttons container">
 
-        
+
         <button class="button-secondary button me-4">Previous</button>
         <button class="button-active button">Next</button>
     </div>

@@ -1,7 +1,7 @@
     @extends("layout.auth")
 
     @section('title')
-        Catalogue
+
     @endsection
 
     @section('content')
@@ -14,7 +14,7 @@
             <div class="search-box mx-auto">
                 <form class="catalogue-search ">
                     <i class="fa fa-search ms-2"></i>
-                    <input type="search"  class="gsearch my-auto" name="gsearch">
+                    <input type="search" class="gsearch my-auto" name="gsearch">
                 </form>
             </div>
         </div>
@@ -36,7 +36,8 @@
                                 ...
                             @endif
                         </p>
-                        <a href="/catalogue/{{ $course->slug }}" class="video-link"><button class="video-btn btn">START</button></a>
+                        <a href="/catalogue/{{ $course->slug }}" class="video-link"><button
+                                class="video-btn btn">START</button></a>
                     </div>
                 </div>
             @empty
@@ -49,7 +50,7 @@
 
         <div class="buttons container">
 
-            
+
             <div class="button-group">
                 <button class="button button-secondary">Previous</button>
                 <button class="button button-active">Next</button>

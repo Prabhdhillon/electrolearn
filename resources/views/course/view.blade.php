@@ -1,6 +1,6 @@
 @extends("layout.auth")
 @section('title')
-    Course OverView
+
 @endsection
 @section('content')
     <div class="course-view">

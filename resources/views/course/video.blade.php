@@ -1,6 +1,6 @@
 @extends("layout.auth")
 @section('title')
-    Course
+
 @endsection
 @section('content')
     <div class="course-player">
