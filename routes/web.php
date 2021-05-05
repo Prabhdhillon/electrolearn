@@ -30,6 +30,7 @@ use Illuminate\Support\Facades\Auth;
 
 
 Route::get('/', [WelcomeController::class, 'index']);
+Route::get('/about', [WelcomeController::class, 'about']);
 Route::get('/login', [AuthController::class, 'login'])->middleware("guest")->name("login");
 Route::post('/login', [AuthController::class, 'handleLogin']);
 Route::get('/register', [AuthController::class, 'register'])->middleware("guest")->name("register");

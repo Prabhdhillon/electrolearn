@@ -86,22 +86,22 @@
                                     width="25" height="25">ElectroLearn</a>
                         </li>
                         <li class="footer-list-item me-3">
-                            <a>TERMS OF USE</a>
+                            <a class="footer-link">TERMS OF USE</a>
                         </li>
                         <li class="footer-list-item me-3">
-                            <a>PRIVACY POLICY</a>
+                            <a class="footer-link">PRIVACY POLICY</a>
                         </li>
                         <li class="footer-list-item me-3">
-                            <a>ABOUT US</a>
+                            <a href="/about" class="footer-link">ABOUT US</a>
                         </li>
                         <li class="footer-list-item me-3">
-                            <a>DONATE</a>
+                            <a class="footer-link">DONATE</a>
                         </li>
                         <li class="footer-list-item me-3">
-                            <a>ISSUES</a>
+                            <a class="footer-link">ISSUES</a>
                         </li>
                         <li class="footer-list-item me-3">
-                            <a>SUBSCRIPTION</a>
+                            <a class="footer-link">SUBSCRIPTION</a>
                         </li>
                     </ul>
                     <p class="footer-copyright ms-4"> COPYRIGHT AND ALL RIGHTS RESERVED SINCE 2021</p>

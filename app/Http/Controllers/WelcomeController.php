@@ -12,4 +12,9 @@ class WelcomeController extends Controller
         $courses = Course::with("user")->get();
         return view("welcome")->with("courses", $courses);
     }
+    public function about()
+    {
+      
+        return view("about");
+    }
 }
