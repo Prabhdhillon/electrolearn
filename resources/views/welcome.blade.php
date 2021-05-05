@@ -119,7 +119,7 @@
 
             <div class="row">
                 <div class="col-md-6 col-sm-12">
-                    <img class="showcase-img" src="{{ asset('images/person2.png') }}">
+                    <img class="showcase-img" data-aos="fade-right"src="{{ asset('images/person2.png') }}">
                 </div>
                 <div class="col-md-6 col-sm-12">
 
