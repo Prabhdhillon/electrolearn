@@ -27,7 +27,7 @@
                 <h6 class="video-instructor">By Micheal G.</h6>
                 <p class="video-discription">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque voluptates vero a, ducimus blanditiis
-                    deleniti inventore consectetur minima quod delectus rerum neque dignissimos officiis.
+                    
                 </p>
                 {{-- <p class="video-discription"> @php $length = 100; @endphp
                     {{ Str::substr($course->description, 0, $length) }}
