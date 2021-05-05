@@ -38,7 +38,7 @@
                                         <a class="nav-link me-5" aria-current="page" href="/">Home</a>
                                     </li>
                                     <li class="nav-item ">
-                                        <a class="nav-link me-5 " href="#">Discipline</a>
+                                        <a class="nav-link me-5 " href="#">Instructors</a>
                                     </li>
                                     <li class="nav-item ">
                                         <a class="nav-link me-5" href="/catalogue">Courses</a>

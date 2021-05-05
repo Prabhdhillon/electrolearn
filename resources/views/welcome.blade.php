@@ -5,16 +5,16 @@
 @endsection
 
 @section('content')
-@auth
+    @auth
         <div class="introduction mt-5 container">
-            <img class="mt-10 display-image" src="{{ asset('images/Course_Image.png') }}">
+            <img class="mt-10 display-image" src="{{ asset('images/Course_Image2.png') }}">
             <h1 class="mt-3 introduction-heading">Start Learning for FREE!</h1>
         </div>
 
 
     @else
         <div class="introduction mt-5 container">
-            <img class="mt-10 display-image" src="{{ asset('images/Course_Image.png') }}">
+            <img class="mt-10 display-image" src="{{ asset('images/Course_Image2.png') }}">
             <h1 class="mt-3 introduction-heading">Start Learning for FREE!</h1>
 
             <div class="row mt-3 mx-auto introduction-row">
