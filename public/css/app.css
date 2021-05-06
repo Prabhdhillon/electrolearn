@@ -74,7 +74,6 @@ body {
   font-size: 14px;
 }
 .course-view .course-info-paragraph {
-  text-align: justify;
   font-size: 16px;
   font-weight: 400;
   margin-top: 10px;
@@ -82,8 +81,7 @@ body {
 }
 .course-view .course-info-heading {
   font-weight: 700;
-  font-size: 12px;
-  text-align: left;
+  font-size: 16px;
   margin-top: 30px;
   text-transform: uppercase;
 }
@@ -426,8 +424,8 @@ body {
 }
 
 .video-instructor {
-  font-size: 15px;
-  font-weight: 400;
+  font-size: 14px;
+  font-weight: 600;
   display: inline-block;
 }
 

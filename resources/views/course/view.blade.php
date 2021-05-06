@@ -5,20 +5,22 @@
 @section('content')
     <div class="course-view">
         <div class="container">
-            <div class="main-heading text-center">
-
+            <div class="main-heading text-center mt-5">
                 <img class="img-fluid img-instructor" src="/{{ $course->thumbnail }}" alt="">
                 <h1>{{ $course->title }}</h1>
             </div>
 
             {{-- course --}}
             <div class="course">
-                <div class="course-subtitle">
+                <div class="course-info-heading">
                     <div>By {{ $course->user->name }}</div>
 
                 </div>
                 <div class="course-info">
                     <div class="course-info-paragraph">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta deserunt non cum vel magnam saepe
+                        repudiandae minima assumenda deleniti, sint alias suscipit exercitationem. Et labore ab repellendus
+                        magnam officiis nihil?
                         @php $length = 500; @endphp
                         {{ Str::substr($course->description, 0, $length) }}
                         @if (Str::length($course->description) > $length)
