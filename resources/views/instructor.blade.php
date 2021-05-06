@@ -6,10 +6,10 @@
 
 @section('content')
     <!--INSTRUCTOR starts-->
-    <div class="instructor container">
-        <img src="/{{ $user->profile }}" class="instructor-img">
-        <h1 class="instructor-title heading mt-4">{{ $user->name }}</h1>
-        <p class="instructor-discription mt-4">{{ $user->description }}</p>
+    <div class="instructor-individual container">
+        <img src="/{{ $user->profile }}" class="instructor-individual-img ">
+        <h1 class=".instructor-individual-title heading mt-4">{{ $user->name }}</h1>
+        <p class="instructor-ind-discription mt-4">{{ $user->description }}</p>
     </div>
     <!--INSTRUCTOR ends-->
 
@@ -29,7 +29,7 @@
                         ...
                     @endif
                 </p> --}}
-                    <a href="/catalogue/{{ $course->slug }}"> <button class="video-btn btn">BEGIN</button></a>
+                    <a href="/catalogue/{{ $course->slug }}" class="instructor-link-video-btn"> <button class="video-btn btn">BEGIN</button></a>
 
                 </div>
             </div>

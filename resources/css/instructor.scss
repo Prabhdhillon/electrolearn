@@ -29,14 +29,13 @@
     
     }
 .instructor-content-box{
-        margin-top: 10px;
+     margin-top: 10px;
     }
 .instructor-discription {
     font-size: 14px;
     text-align: justify;
 }
 .instructor {
-    
     margin-top: 100px;
 }
 
@@ -53,19 +52,7 @@
     display: inline-block;
 }
 
-.video-time {
-    font-size: 14px;
-    font-weight: 400;
-    display: inline;
-    float: right;
-  
-    
-}
-
-
-
 .instructor-specs {
-
     font-size: 14px;
     font-weight: 400;
     text-align: justify;
@@ -77,7 +64,7 @@
     border-radius: 100px;
     color: #ffffff;
     background-color: #773dd6;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
 }
 .buttons {
@@ -87,5 +74,33 @@
 
 
 .instructor-link-btn{
+    text-decoration: none;
+}
+.instructor-individual {
+    margin-top: 100px;
+    text-align: center;
+    width: 55%;
+}
+
+.instructor-individual-img  {
+    
+    
+        border-radius:1000px;
+        width: 200px;
+        height: auto;
+    
+}
+.instructor-individual-title {
+    text-align: center;
+    font-size: 64px;
+    font-weight: 700;
+    
+    
+}
+.instructor-individual-discription  {
+    font-size: 14px;
+    text-align: justify;
+}
+.instructor-link-video-btn {
     text-decoration: none;
 }
