@@ -38,7 +38,10 @@
                                         <a class="nav-link me-5" aria-current="page" href="/">Home</a>
                                     </li>
                                     <li class="nav-item ">
-                                        <a class="nav-link me-5 " href="#">Instructors</a>
+                                        <a class="nav-link me-5 " href="/instructors">Instructors</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a class="nav-link me-5 " href="/about">About Us</a>
                                     </li>
                                     <li class="nav-item ">
                                         <a class="nav-link me-5" href="/catalogue">Courses</a>
@@ -53,7 +56,10 @@
                                         <a class="nav-link me-5" aria-current="page" href="/">Home</a>
                                     </li>
                                     <li class="nav-item ">
-                                        <a class="nav-link me-5 " href="#">Instructors</a>
+                                        <a class="nav-link me-5 " href="/instructors">Instructor</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a class="nav-link me-5 " href="/about">About Us</a>
                                     </li>
                                     <li class="nav-item ">
                                         <a class="nav-link me-5" href="/catalogue">Courses</a>
