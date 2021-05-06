@@ -27,7 +27,8 @@
                     <p class="instructor-specs">
                         {{ $user->specs }}
                     </p>
-                    <a href="/instructors/{{ $user->slug }}" class="instructor-link-btn" ><button class="instructor-btn btn">Profile</button></a>
+                    <a href="/instructors/{{ $user->slug }}" class="instructor-link-btn"><button
+                            class="instructor-btn btn">Profile</button></a>
                 </div>
             </div>
         @empty
