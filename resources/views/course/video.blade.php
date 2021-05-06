@@ -14,9 +14,6 @@
             <div class="course-player-title">{{ $video->title }}</div>
             <div class="course-player-paragraph">
                 <p>{{ $video->description }}</p>
-
-
-
             </div>
             <div class="button-group button-group-margin">
                 @isset($previous)
