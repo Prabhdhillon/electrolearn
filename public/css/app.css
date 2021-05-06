@@ -215,8 +215,17 @@ body {
   color: #ffffff;
 }
 
+.hamburger-icon {
+  color: #ffffff;
+  font-size: 30px;
+}
+
 .navbar-toggler {
-  background: #1931a8 !important;
+  border: 0px !important;
+}
+
+.navbar-toggler:checked {
+  border: 0px !important;
 }
 
 .footer-wave {

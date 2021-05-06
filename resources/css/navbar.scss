@@ -31,6 +31,19 @@
 .navbar-brand:hover {
     color: #ffffff;
 }
-.navbar-toggler {
-    background: #1931a8 !important;
+.hamburger-icon{
+    color:#ffffff;
+    font-size: 30px;
 }
+.navbar-toggler{
+    border: 0px !important;
+}
+.navbar-toggler:checked{
+    border: 0px  !important;
+}
+// .navbar-toggler {
+//     background: #1931a8 !important;
+// }
+// .navbar-toggler-icon{
+//     font-size: 20px;
+// }
