@@ -325,6 +325,13 @@ body {
   display: inline-block;
 }
 
+.video-time {
+  font-size: 14px;
+  font-weight: 400;
+  display: inline;
+  float: right;
+}
+
 .instructor-specs {
   font-size: 14px;
   font-weight: 400;
@@ -336,7 +343,7 @@ body {
   border-radius: 100px;
   color: #ffffff;
   background-color: #773dd6;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
 }
 
@@ -444,7 +451,7 @@ body {
   border-radius: 100px;
   color: #ffffff;
   background-color: #773dd6;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   text-decoration: none;
 }

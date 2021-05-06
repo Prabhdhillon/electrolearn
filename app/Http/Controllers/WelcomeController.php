@@ -9,12 +9,12 @@ class WelcomeController extends Controller
 {
     public function index()
     {
-        $courses = Course::with("user")->get();
+        $courses = Course::get();
         return view("welcome")->with("courses", $courses);
     }
     public function about()
     {
-      
+
         return view("about");
     }
 }

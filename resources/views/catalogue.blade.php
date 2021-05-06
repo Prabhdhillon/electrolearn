@@ -18,7 +18,7 @@
         <!--VIDEOS start-->
         <div class="video container">
             @forelse($courses as $course)
-                <div class="row video-row mx-auto">
+                <div class="row video-row mx-auto mt-5">
                     <div class="col-md-6 col-sm-12"><img src="/{{ $course->thumbnail }}" class="video-img img-fluid">
                     </div>
                     <div class="col-md-6 col-sm-12 content-box">
