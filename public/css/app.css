@@ -73,6 +73,9 @@ body {
   font-weight: 700;
   font-size: 14px;
 }
+.course-view .lecture-image {
+  border-radius: 10px;
+}
 .course-view .course-info-paragraph {
   font-size: 16px;
   font-weight: 400;
