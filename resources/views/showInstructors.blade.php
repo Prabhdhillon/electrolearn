@@ -24,7 +24,7 @@
                     <p class="video-discription">
                         {{ $user->description }}
                     </p>
-                    <a href=""><button class="video-btn btn">Profile</button></a>
+                    <a href="/instructors/{{ $user->slug }}"><button class="video-btn btn">Profile</button></a>
                 </div>
             </div>
         @empty

@@ -13,7 +13,7 @@ class InstructorController extends Controller
         $users = User::where('is_instructor', '!=', 0)->get();
         return view("showInstructors", compact("users"));
     }
-    public function show(User $user)
+    public function show(User $users)
     {
         return view("instructor", compact("users"));
     }
