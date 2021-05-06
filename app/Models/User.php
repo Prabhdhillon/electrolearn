@@ -42,7 +42,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
+    public function getRouteKeyName()
+    {
+        return "slug";
+    }
     function courses()
     {
         return $this->hasMany(Course::class, "author_id");

@@ -1,7 +1,7 @@
     @extends("layout.auth")
 
     @section('title')
-
+        Electrolearn
     @endsection
 
     @section('content')
@@ -11,12 +11,7 @@
         <div class="catalogue container">
 
             <h1 class="catalogue-title heading mt-5 ">Courses</h1>
-            <div class="search-box mx-auto">
-                <form class="catalogue-search ">
-                    <i class="fa fa-search ms-2"></i>
-                    <input type="search" class="gsearch my-auto" name="gsearch">
-                </form>
-            </div>
+
         </div>
         <!--CATALOGUE ends-->
 
@@ -48,12 +43,12 @@
         </div>
         <!--VIDEOS ends-->
 
-        <div class="buttons container">
+        {{-- <div class="buttons container">
 
 
             <div class="button-group">
                 <button class="button button-secondary">Previous</button>
                 <button class="button button-active">Next</button>
             </div>
-        </div>
+        </div> --}}
     @endsection

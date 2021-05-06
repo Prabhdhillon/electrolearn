@@ -10,6 +10,7 @@ class InstructorController extends Controller
 {
     public function index()
     {
-        return view("instructor");
+        $users = User::where('is_instructor', '!=', 0)->get();
+        return view("showInstructors", compact("users"));
     }
 }

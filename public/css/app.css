@@ -104,7 +104,7 @@ body {
 }
 .img-instructor {
   width: 679px;
-  height: 403px;
+  height: auto;
   border-radius: 20px;
 }
 
@@ -280,7 +280,8 @@ body {
 }
 
 .instructor-img {
-  width: 300px;
+  border-radius: 1000px;
+  width: 200px;
   height: auto;
 }
 
@@ -411,7 +412,7 @@ body {
 
 .video-img {
   width: 350px;
-  height: 180px;
+  height: auto;
   border-radius: 5px;
 }
 

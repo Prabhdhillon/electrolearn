@@ -1,7 +1,7 @@
 @extends("layout.auth")
 
 @section('title')
-
+    Electrolearn
 @endsection
 
 @section('content')
