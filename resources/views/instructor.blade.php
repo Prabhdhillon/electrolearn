@@ -6,8 +6,8 @@
 
 @section('content')
     <!--INSTRUCTOR starts-->
-    <div class="instructor container">
-        <img src="/{{ $user->profile }}" class="instructor-img">
+    <div class="indiviual container">
+        <img src="/{{ $user->profile }}" class="instructor-image">
         <h1 class="instructor-title heading mt-4">{{ $user->name }}</h1>
         <p class="instructor-discription mt-4">{{ $user->description }}</p>
     </div>
