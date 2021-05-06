@@ -13,8 +13,9 @@
 
     <!--VIDEOS start-->
     <div class="video container">
-        <div class="row video-row mx-auto">
-            @forelse ($users as $user)
+
+        @forelse ($users as $user)
+            <div class="row video-row mx-auto">
                 <div class="col-md-6 col-sm-12">
                     <img src="/{{ $user->profile }}" class="instructor-img img-fluid">
                 </div>
@@ -25,12 +26,13 @@
                     </p>
                     <a href=""><button class="video-btn btn">Profile</button></a>
                 </div>
-            @empty
+            </div>
+        @empty
 
-            @endforelse
+        @endforelse
 
 
-        </div>
+
     </div>
 
 
