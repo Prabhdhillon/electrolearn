@@ -76,6 +76,9 @@ body {
 .course-view .lecture-image {
   border-radius: 10px;
 }
+.course-view .lecture-title {
+  font-size: 18px;
+}
 .course-view .course-info-paragraph {
   font-size: 16px;
   font-weight: 400;
@@ -142,7 +145,7 @@ body {
   margin-top: 15px;
 }
 .course-player .course-player-paragraph {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
   margin-top: 15px;
 }
