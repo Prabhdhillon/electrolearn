@@ -7,7 +7,7 @@
         <div class="container">
             <div class="main-heading text-center">
 
-                <img class="img-fluid img-instructor mt-5" src="/{{ $course->thumbnail }}" alt="">
+                <img class="img-fluid img-instructor" src="/{{ $course->thumbnail }}" alt="">
                 <h1>{{ $course->title }}</h1>
             </div>
 
