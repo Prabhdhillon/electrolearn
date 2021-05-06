@@ -24,6 +24,7 @@ class Course extends Model
         return $this->hasMany(Video::class, "course_id");
     }
 
+
     function user()
     {
         return $this->belongsTo(User::class, "author_id");

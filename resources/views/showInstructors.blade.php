@@ -28,7 +28,7 @@
                 </div>
             </div>
         @empty
-
+            <h3>Sorry, there are no instructors.</h3>
         @endforelse
 
 
