@@ -5,26 +5,29 @@
 @endsection
 
 @section('content')
-    <div class="catalogue container">
+    <div class="instructor-top container">
 
-        <h1 class="catalogue-title heading mt-5 ">Instructors</h1>
+        <h1 class="instructor-title heading mt-5 ">Instructors</h1>
     </div>
     <!--CATALOGUE ends-->
 
     <!--VIDEOS start-->
-    <div class="video container">
+    <div class="instructor container">
 
         @forelse ($users as $user)
-            <div class="row video-row mx-auto">
-                <div class="col-md-6 col-sm-12">
+            <div class="row instructor-row mx-auto">
+                <div class="col-md-6 col-sm-12 col-img">
                     <img src="/{{ $user->profile }}" class="instructor-img img-fluid">
                 </div>
-                <div class="col-md-5 col-sm-12 content-box">
-                    <h6 class="video-title">{{ $user->name }}</h6>
-                    <p class="video-discription">
+                <div class="col-md-5 col-sm-12 instructor-content-box">
+                    <h6 class="instructor-name">{{ $user->name }}</h6>
+                    <p class="instructor-discription">
                         {{ $user->description }}
                     </p>
-                    <a href="/instructors/{{ $user->slug }}"><button class="video-btn btn">Profile</button></a>
+                    <p class="instructor-specs">
+                        {{ $user->specs }}
+                    </p>
+                    <a href="/instructors/{{ $user->slug }}" class="instructor-link-btn" ><button class="instructor-btn btn">Profile</button></a>
                 </div>
             </div>
         @empty
