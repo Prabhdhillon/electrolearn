@@ -104,19 +104,20 @@
                             <a class="footer-link">SUBSCRIPTION</a>
                         </li>
                     </ul>
-                    <p class="footer-copyright ms-4"> COPYRIGHT AND ALL RIGHTS RESERVED SINCE 2021</p>
+                    <p class="footer-copyright ms-4"> COPYRIGHT AND ALL RIGHTS RESERVED</p>
                 </div>
             </div>
         </div>
 
         <!--FOOTER ends-->
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init({
-        offset:200,
-        duration:800,
-    });
-  </script>
+        <script>
+            AOS.init({
+                offset: 200,
+                duration: 800,
+            });
+
+        </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
         </script>

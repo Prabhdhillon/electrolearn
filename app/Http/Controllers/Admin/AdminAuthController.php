@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class AdminAuthController extends Controller
 {
@@ -25,6 +26,7 @@ class AdminAuthController extends Controller
 
         $admin = new User($validatedRequest);
         $admin->is_instructor = true;
+        $admin->slug = Str::kebab($admin->name);
         $admin->password = Hash::make($admin->password);
         $admin->save();
         return redirect()->back()->with('success', 'Your Are Registered!');
