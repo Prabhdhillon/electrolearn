@@ -28,7 +28,7 @@ class CourseController extends Controller
             'title' => 'required|min:3|max:120',
             'description' => 'required',
             'tools' => 'required|min:3|max:100',
-            'thumbnail' => 'required|file|max:2000|mimes:jpg,bmp,png'
+            'thumbnail' => 'required|file|max:5000|mimes:jpg,bmp,png'
         ]);
 
         $course = new Course($validatedRequest);
