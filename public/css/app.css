@@ -476,6 +476,10 @@ body {
   margin-top: 30px;
 }
 
+.video {
+  margin-top: 100px;
+}
+
 .video-btn {
   padding: 5px 13px;
   justify-content: center;
