@@ -234,7 +234,7 @@ body {
 
 .footer-wave {
   background-image: url("/images/wave-footer.svg");
-  height: 380px;
+  height: 420px;
   background-size: cover;
   background-position: center;
 }
@@ -262,8 +262,8 @@ body {
 
 .footer-list-item {
   display: inline-block;
-  font-size: 12px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .footer-link {
@@ -272,7 +272,7 @@ body {
 }
 
 .footer-copyright {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
 }
 

@@ -15,7 +15,7 @@
     <div class="bg-header-dark">
         <div class="content-header bg-white-10">
             <!-- Logo -->
-            <a class="font-w600 text-white tracking-wide" href="index.html">
+            <a class="font-w600 text-white tracking-wide" href="/admin/courses">
                 <span class="smini-visible">
                     E<span class="opacity-75">n</span>
                 </span>
