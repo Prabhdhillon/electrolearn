@@ -6,6 +6,7 @@
 
 @section('content')
     @auth
+
         <div class="introduction mt-5 container">
             <img class="mt-10 img-fluid display-image" src="{{ asset('images/Course_Image2.png') }}">
             <h1 class="mt-3 introduction-heading">Start Learning for FREE!</h1>
@@ -217,4 +218,3 @@
     <!--DONATIONS ends-->
 
 @endsection
-</div>
