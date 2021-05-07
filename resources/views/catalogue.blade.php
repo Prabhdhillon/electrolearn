@@ -36,7 +36,9 @@
                     </div>
                 </div>
             @empty
-                No courses to show!
+                <div class="empty-div mt-5">
+                    <h3 style="text-align:center">Sorry, there are no Courses.</h3>
+                </div>
             @endforelse
 
 

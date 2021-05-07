@@ -29,12 +29,13 @@
                         ...
                     @endif
                 </p> --}}
-                    <a href="/catalogue/{{ $course->slug }}" class="instructor-link-video-btn"> <button class="video-btn btn">BEGIN</button></a>
+                    <a href="/catalogue/{{ $course->slug }}" class="instructor-link-video-btn"> <button
+                            class="video-btn btn">BEGIN</button></a>
 
                 </div>
             </div>
         @empty
-            <h3>Sorry, there are currently no courses.</h3>
+
         @endforelse
 
 

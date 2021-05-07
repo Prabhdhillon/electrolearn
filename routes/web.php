@@ -35,11 +35,11 @@ Route::get('/login', [AuthController::class, 'login'])->middleware("guest")->nam
 Route::post('/login', [AuthController::class, 'handleLogin']);
 Route::get('/register', [AuthController::class, 'register'])->middleware("guest")->name("register");
 Route::post('/register', [AuthController::class, 'handleRegister']);
-Route::get('/instructors', [InstructorController::class, 'index'])->middleware("auth");
-Route::get('/instructors/{user}', [InstructorController::class, 'show'])->middleware("auth");
-Route::get('/catalogue', [CatalogueController::class, 'catalogue'])->middleware("auth")->name("catalogue");
-Route::get('/catalogue/{course}', [ViewController::class, 'showCourse'])->middleware("auth");
-Route::get('/catalogue/{course}/video/{video}', [VideoController::class, 'index'])->middleware("auth");
+Route::get('/instructors', [InstructorController::class, 'index']);
+Route::get('/instructors/{user}', [InstructorController::class, 'show']);
+Route::get('/catalogue', [CatalogueController::class, 'catalogue'])->name("catalogue");
+Route::get('/catalogue/{course}', [ViewController::class, 'showCourse']);
+Route::get('/catalogue/{course}/video/{video}', [VideoController::class, 'index']);
 
 Route::get("/home", function () {
   return redirect("/");

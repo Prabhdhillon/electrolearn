@@ -40,11 +40,12 @@
                                     <li class="nav-item ">
                                         <a class="nav-link me-5 " href="/instructors">Instructors</a>
                                     </li>
-                                    <li class="nav-item ">
-                                        <a class="nav-link me-5 " href="/about">About Us</a>
-                                    </li>
+
                                     <li class="nav-item ">
                                         <a class="nav-link me-5" href="/catalogue">Courses</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a class="nav-link me-5 " href="/about">About Us</a>
                                     </li>
                                     <li class="nav-item ">
                                         <a class="nav-link me-5" href="/signout"><button type="button"
@@ -58,11 +59,12 @@
                                     <li class="nav-item ">
                                         <a class="nav-link me-5 " href="/instructors">Instructor</a>
                                     </li>
-                                    <li class="nav-item ">
-                                        <a class="nav-link me-5 " href="/about">About Us</a>
-                                    </li>
+
                                     <li class="nav-item ">
                                         <a class="nav-link me-5" href="/catalogue">Courses</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a class="nav-link me-5 " href="/about">About Us</a>
                                     </li>
                                     <li class="nav-item ml-3">
                                         <a class="nav-link" href="/register"><button type="button"

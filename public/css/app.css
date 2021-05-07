@@ -402,6 +402,10 @@ body {
   margin-top: 50px;
 }
 
+.empty-div {
+  height: 380px;
+}
+
 .gsearch {
   background-color: #242630;
   border: 0;
