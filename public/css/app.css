@@ -233,8 +233,8 @@ body {
 }
 
 .footer-wave {
-  background-image: url("/images/footer-wave.png");
-  height: 262px;
+  background-image: url("/images/wave-footer.svg");
+  height: 380px;
   background-size: cover;
   background-position: center;
 }
@@ -531,7 +531,7 @@ body {
 }
 
 .section1 {
-  background-image: url("/images/wave1.png");
+  background-image: url("/images/wave-navbar.svg");
   z-index: -100000;
   height: 262px;
   background-size: cover;

@@ -26,7 +26,6 @@ class AuthController extends Controller
             'email' => 'required|email|unique:users',
             'password' => 'required|min:8|confirmed',
             'password_confirmation' => 'required|min:8',
-
         ]);
         $user = new User($validaterequest);
         $user->password = Hash::make($user->password);
