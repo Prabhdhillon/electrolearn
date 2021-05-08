@@ -82,7 +82,7 @@
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk
                             of the card's.</p>
-                        <a href="#" class="btn btn-primary plans-card-btn">START LEARNING</a>
+
                     </div>
                 </div>
 
@@ -99,7 +99,7 @@
 
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk
                             of the card's .</p>
-                        <a href="#" class="btn btn-primary plans-card-btn">START LEARNING</a>
+
                     </div>
                 </div>
             </div>
@@ -113,7 +113,7 @@
 
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk
                             of the card's .</p>
-                        <a href="#" class="btn btn-primary plans-card-btn">START LEARNING</a>
+
                     </div>
                 </div>
 
@@ -147,8 +147,9 @@
                         sagittis id eget tellus. Morbi dignissim urna tincidunt, fermentum nulla sit amet,
                         consectetur nisi.</p>
 
-                    <button class="btn-lg showcase-btn" type="button" name="button">DISCORD</button>
-                    <button class="btn-lg showcase-btn" type="button" name="button">LEARN MORE</button>
+                    <a href="https://discord.gg/Mx9Rz9z3Gv"> <button class="btn-lg showcase-btn" type="button"
+                            name="button">DISCORD</button></a>
+
                 </div>
             </div>
         </div>
